@@ -1,2 +1,2 @@
 # cairn
-experimenting with neural networks
+experimenting with neural networks and block chain
