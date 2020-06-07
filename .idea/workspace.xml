@@ -26,9 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f171d518-ef0c-4644-a59a-54b64050f29b" name="Default Changelist" comment="added a freaking block chain hahahhahahahah mu hu wha ha ha HA HA ha ha gurgle belch ha ha">
+    <list default="true" id="f171d518-ef0c-4644-a59a-54b64050f29b" name="Default Changelist" comment="updated and nn for python 3+. also this god damn ide workspace.xml file.">
+      <change afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perceptrons/and_ptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/perceptrons/and_ptron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nn_training_chain/block_chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/nn_training_chain/block_chain.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="or_ptron" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -145,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591517215706</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated and nn for python 3+. also this god damn ide workspace.xml file.">
+      <created>1591517944763</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591517944763</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,16 +186,21 @@
     <MESSAGE value="here's another IDE windows related add." />
     <MESSAGE value="removing virtual env" />
     <MESSAGE value="added a freaking block chain hahahhahahahah mu hu wha ha ha HA HA ha ha gurgle belch ha ha" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a freaking block chain hahahhahahahah mu hu wha ha ha HA HA ha ha gurgle belch ha ha" />
+    <MESSAGE value="updated and nn for python 3+. also this god damn ide workspace.xml file." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated and nn for python 3+. also this god damn ide workspace.xml file." />
   </component>
   <component name="WindowStateProjectService">
     <state x="989" y="315" key="#or_ptron" timestamp="1591509020186">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="989" y="315" key="#or_ptron/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1591509020186" />
-    <state x="781" y="365" key="SettingsEditor" timestamp="1591509079542">
+    <state x="781" y="365" key="SettingsEditor" timestamp="1591518206357">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="781" y="365" key="SettingsEditor/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1591509079542" />
+    <state x="781" y="365" key="SettingsEditor/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1591518206357" />
+    <state x="1123" y="492" key="refactoring.ChangeSignatureDialog" timestamp="1591518501048">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1123" y="492" key="refactoring.ChangeSignatureDialog/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1591518501048" />
   </component>
 </project>

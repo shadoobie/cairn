@@ -25,11 +25,12 @@ class Blockchain:
             else:
                 block.nonce += 1
 
-blockchain = Blockchain()
+if __name__ == '__main__':
+    blockchain = Blockchain()
 
-for n in range(10):
-    blockchain.mine(block("Block " + str( n + 1 )))
+    for n in range(10):
+        blockchain.mine(block("Block " + str( n + 1 )))
 
-while blockchain.head != None:
-    print(blockchain.head)
-    blockchain.head = blockchain.head.next
+    while blockchain.head != None:
+        print(blockchain.head)
+        blockchain.head = blockchain.head.next
