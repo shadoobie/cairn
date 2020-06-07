@@ -26,21 +26,37 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f171d518-ef0c-4644-a59a-54b64050f29b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cairn.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perceptrons/and_ptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/perceptrons/and_ptron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perceptrons/or_ptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/perceptrons/or_ptron.py" afterDir="false" />
+    <list default="true" id="f171d518-ef0c-4644-a59a-54b64050f29b" name="Default Changelist" comment="removing virtual env">
+      <change afterPath="$PROJECT_DIR$/nn_training_chain/block.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nn_training_chain/block_chain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="shadoobie &lt;tsx5%#%rrp&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/shadoobie/cairn.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1cyhdrNedNWjXtLzDqdFSH9eYpo" />
   <component name="ProjectViewState">
@@ -50,6 +66,32 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="or_ptron" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cairn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/perceptrons" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/perceptrons/or_ptron.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.or_ptron" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -62,6 +104,42 @@
       <option name="presentableId" value="Default" />
       <updated>1591506830936</updated>
     </task>
+    <task id="LOCAL-00001" summary="i think these are now python 3+ compatible and they probably also still work for python 2.6 or 2.7">
+      <created>1591508652778</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591508652779</updated>
+    </task>
+    <task id="LOCAL-00002" summary="i think these are now python 3+ compatible and they probably also still work for python 2.6 or 2.7">
+      <created>1591508674050</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591508674050</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ugh, every OS makes this IDE make differeing stuff and i'm so sorry i check them in.  plan to remove them all later.">
+      <created>1591508716454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591508716454</updated>
+    </task>
+    <task id="LOCAL-00004" summary="here's another IDE windows related add.">
+      <created>1591508770064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591508770064</updated>
+    </task>
+    <task id="LOCAL-00005" summary="removing virtual env">
+      <created>1591509986301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591509986302</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,5 +164,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="i think these are now python 3+ compatible and they probably also still work for python 2.6 or 2.7" />
+    <MESSAGE value="ugh, every OS makes this IDE make differeing stuff and i'm so sorry i check them in.  plan to remove them all later." />
+    <MESSAGE value="here's another IDE windows related add." />
+    <MESSAGE value="removing virtual env" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing virtual env" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="989" y="315" key="#or_ptron" timestamp="1591509020186">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="989" y="315" key="#or_ptron/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1591509020186" />
+    <state x="781" y="365" key="SettingsEditor" timestamp="1591509079542">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="781" y="365" key="SettingsEditor/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1591509079542" />
   </component>
 </project>
