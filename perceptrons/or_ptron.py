@@ -24,4 +24,4 @@ for x,y in [(0,0),(1,0),(0,1),(1,1)]:
     outp_pn = x*weights[0]+y*weights[1]+bias*weights[2]
     #Based on the trained wieghts
     outp = 1.0/(1+numpy.exp(-outp_pn))
-    print x,"OR",y,"yields:",outp
+    print (str(x) + " OR " + str(y) + " yields: " + str(outp))
