@@ -1,4 +1,4 @@
-import numpy,random,os, block, blockchain
+import numpy,random,os
 
 lr = 1
 bias = 1
