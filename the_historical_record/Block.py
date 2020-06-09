@@ -1,7 +1,8 @@
 import datetime
 import hashlib
 
-class block:
+
+class Block:
     blockNo = 0
     data = None
     next = None

@@ -1,7 +1,4 @@
 import nn_training_chain
-import nn_training_chain.block_chain
-import perceptrons.and_ptron
-import perceptrons.or_ptron
 
 
 class TestStuff:

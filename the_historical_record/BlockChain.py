@@ -1,12 +1,12 @@
-from block import block
+from the_historical_record.Block import Block
 
-class Blockchain:
 
+class BlockChain:
     diff = 20
-    maxNonce = 2**32
-    target = 2 ** (256-diff)
+    maxNonce = 2 ** 20
+    target = 2 ** (256 - diff)
 
-    block = block("genesis")
+    block = Block("genesis")
     dummy = head = block
 
     def add(self, block):
@@ -25,12 +25,13 @@ class Blockchain:
             else:
                 block.nonce += 1
 
+
 if __name__ == '__main__':
-    blockchain = Blockchain()
+    myBlockChain = BlockChain()
 
     for n in range(10):
-        blockchain.mine(block("Block " + str( n + 1 )))
+        myBlockChain.mine(Block("Block " + str(n + 1)))
 
-    while blockchain.head != None:
-        print(blockchain.head)
-        blockchain.head = blockchain.head.next
+    while myBlockChain.head is not None:
+        print(myBlockChain.head)
+        myBlockChain.head = myBlockChain.head.next
