@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_historical_record/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_historical_record/TestStuff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +60,25 @@
       <option name="presentableId" value="Default" />
       <updated>1591689085644</updated>
     </task>
+    <task id="LOCAL-00001" summary="test works for blockchain now.">
+      <created>1591689718579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591689718579</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test works for blockchain now." />
+    <option name="LAST_COMMIT_MESSAGE" value="test works for blockchain now." />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="332" y="23" width="775" height="837" key="CommitChangelistDialog2" timestamp="1591689718294">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="332" y="23" width="775" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1591689718294" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom" timestamp="1591689304562">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
