@@ -25,13 +25,12 @@ class BlockChain:
             else:
                 block.nonce += 1
 
-
-if __name__ == '__main__':
-    myBlockChain = BlockChain()
-
-    for n in range(10):
-        myBlockChain.mine(Block("Block " + str(n + 1)))
-
-    while myBlockChain.head is not None:
-        print(myBlockChain.head)
-        myBlockChain.head = myBlockChain.head.next
+# if __name__ == '__main__':
+#     myBlockChain = BlockChain()
+#
+#     for n in range(10):
+#         myBlockChain.mine(Block("Block " + str(n + 1)))
+#
+#     while myBlockChain.head is not None:
+#         print(myBlockChain.head)
+#         myBlockChain.head = myBlockChain.head.next
