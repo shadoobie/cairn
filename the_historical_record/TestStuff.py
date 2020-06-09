@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+
 from the_historical_record.Block import Block
 from the_historical_record.BlockChain import BlockChain
 
