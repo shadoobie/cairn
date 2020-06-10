@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="">
+    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="naming  neural network">
+      <change afterPath="$PROJECT_DIR$/clovis_points/ActivationFunctions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clovis_points/Flint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perceptrons/or_ptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/perceptrons/or_ptron.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.or_ptron">
     <configuration name="TestStuff" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cairn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -43,8 +53,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="or_ptron" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cairn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/perceptrons" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/perceptrons/or_ptron.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.or_ptron" />
         <item itemvalue="Python.TestStuff" />
       </list>
     </recent_temporary>
@@ -67,33 +99,100 @@
       <option name="project" value="LOCAL" />
       <updated>1591689718579</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create README.md for block chain project">
+      <created>1591763448139</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591763448139</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test works for blockchain now.">
+      <created>1591763625002</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591763625002</updated>
+    </task>
+    <task id="LOCAL-00004" summary="found a theme for this neural network project">
+      <created>1591764773475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591764773475</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="create README.md for block chain project" />
     <MESSAGE value="test works for blockchain now." />
-    <option name="LAST_COMMIT_MESSAGE" value="test works for blockchain now." />
+    <MESSAGE value="found a theme for this neural network project" />
+    <option name="LAST_COMMIT_MESSAGE" value="found a theme for this neural network project" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="332" y="23" width="775" height="837" key="CommitChangelistDialog2" timestamp="1591689718294">
-      <screen x="0" y="23" width="1440" height="837" />
+    <state x="587" y="146" key="#xdebugger.evaluate" timestamp="1591767256569">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
+    <state x="587" y="146" key="#xdebugger.evaluate/0.23.1440.838@0.23.1440.838" timestamp="1591767256569" />
+    <state x="332" y="0" width="775" height="837" key="CommitChangelistDialog2" timestamp="1591764773306">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591764773306" />
     <state x="332" y="23" width="775" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1591689718294" />
-    <state width="1398" height="217" key="GridCell.Tab.0.bottom" timestamp="1591689304562">
-      <screen x="0" y="23" width="1440" height="837" />
+    <state width="677" height="270" key="GridCell.Tab.0.bottom" timestamp="1591768269051">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1591689304562" />
-    <state width="1398" height="217" key="GridCell.Tab.0.center" timestamp="1591689304561">
-      <screen x="0" y="23" width="1440" height="837" />
+    <state width="677" height="270" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1591768269051" />
+    <state width="677" height="270" key="GridCell.Tab.0.center" timestamp="1591768269050">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
-    <state width="1398" height="217" key="GridCell.Tab.0.left" timestamp="1591689304560">
-      <screen x="0" y="23" width="1440" height="837" />
+    <state width="677" height="270" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1591768269050" />
+    <state width="677" height="270" key="GridCell.Tab.0.left" timestamp="1591768269049">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1591689304560" />
-    <state width="1398" height="217" key="GridCell.Tab.0.right" timestamp="1591689304561">
-      <screen x="0" y="23" width="1440" height="837" />
+    <state width="677" height="270" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1591768269049" />
+    <state width="677" height="270" key="GridCell.Tab.0.right" timestamp="1591768269050">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
+    <state width="677" height="270" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1591768269050" />
+    <state width="677" height="270" key="GridCell.Tab.1.bottom" timestamp="1591768269052">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state width="677" height="270" key="GridCell.Tab.1.bottom/0.23.1440.838@0.23.1440.838" timestamp="1591768269052" />
+    <state width="677" height="270" key="GridCell.Tab.1.center" timestamp="1591768269052">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state width="677" height="270" key="GridCell.Tab.1.center/0.23.1440.838@0.23.1440.838" timestamp="1591768269052" />
+    <state width="677" height="270" key="GridCell.Tab.1.left" timestamp="1591768269051">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state width="677" height="270" key="GridCell.Tab.1.left/0.23.1440.838@0.23.1440.838" timestamp="1591768269051" />
+    <state width="677" height="270" key="GridCell.Tab.1.right" timestamp="1591768269052">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state width="677" height="270" key="GridCell.Tab.1.right/0.23.1440.838@0.23.1440.838" timestamp="1591768269052" />
+    <state x="720" y="23" width="720" height="837" key="dock-window-1" timestamp="1591767761905">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="720" y="23" width="720" height="837" key="dock-window-1/0.23.1440.838@0.23.1440.838" timestamp="1591767761905" />
+    <state x="745" y="185" width="670" height="676" key="search.everywhere.popup" timestamp="1591771788204">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="745" y="185" width="670" height="676" key="search.everywhere.popup/0.23.1440.838@0.23.1440.838" timestamp="1591771788204" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/perceptrons/or_ptron.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
