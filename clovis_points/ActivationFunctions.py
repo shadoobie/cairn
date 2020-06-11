@@ -1,9 +1,10 @@
-from numpy import numpy
+import numpy
 
 
 class ActivationFunctions:
 
-    def sigmoid_function(self, input1, input2, bias, weights):
+    @staticmethod
+    def sigmoid_function(input1, input2, bias, weights):
         # Sigmoid Function
         outp_pn = input1 * weights[0] + \
                   input2 * weights[1] + \

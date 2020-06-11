@@ -1,7 +1,7 @@
 import sys
 sys.path.append('.')
 sys.path.append('..')
-
+from clovis_points.Flint import Flint
 from the_historical_record.Block import Block
 from the_historical_record.BlockChain import BlockChain
 
@@ -21,8 +21,15 @@ class TestStuff:
         pass
 
     def test_flint_perceptrons(self):
+        learning_rate = 1
+        bias = 1
+        operation = 'or'
+        iterations = 50
+        or_perceptron = Flint(learning_rate, bias, operation)
+        or_perceptron.train_2_inputs_1_output_(iterations)
 
 
 if __name__ == '__main__':
     test_stuff = TestStuff()
-    test_stuff.test_the_historical_record()
+    test_stuff.test_flint_perceptrons()
+    # test_stuff.test_the_historical_record()
