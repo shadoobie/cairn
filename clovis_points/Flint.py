@@ -1,5 +1,7 @@
 from random import random
 
+import numpy
+
 from clovis_points import ActivationFunctions
 
 
@@ -20,7 +22,7 @@ def __init_truth_table__(operation):
 
 
 class Flint:
-    learning_rate = 0
+    learning_rate = 0 #(Lithic reduction)
     bias = 0
     weights = None
     truth_table = None
@@ -46,6 +48,17 @@ class Flint:
         self.weights[1] += error * input2 * self.learning_rate
         self.weights[2] += error * self.bias * self.learning_rate
 
-    def train_2_inputs_1_output_(self, iterations, input1, input2):
+    def train_2_inputs_1_output_(self, iterations):
         for i in range(iterations):
-            self.calculate_error(input1, input2, )
+            error = self.calculate_error(self.truth_table[0],
+                                         self.truth_table[1],
+                                         self.truth_table[2])
+            self.modify_weights_training(error,
+                                         self.truth_table[0],
+                                         self.truth_table[1])
+
+        for x, y in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+            outp_pn = x * self.weights[0] + y * self.weights[1] + self.bias * self.weights[2]
+            # Based on the trained wieghts
+            outp = 1.0 / (1 + numpy.exp(-outp_pn))
+            print(str(x) + " AND " + str(y) + " yields: " + str(outp))
