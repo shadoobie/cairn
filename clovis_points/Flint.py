@@ -3,26 +3,11 @@ from random import random
 import numpy
 
 from clovis_points import ActivationFunctions
-
-
-def __init_truth_table__(operation):
-    table = []
-    if operation in ['or', 'OR', '|']:
-        table.append([0, 0, 0])
-        table.append([1, 1, 1])
-        table.append([1, 0, 1])
-        table.append([0, 1, 1])
-    elif operation in ['and', 'AND', '&']:
-        table.append([0, 0, 0])
-        table.append([1, 1, 1])
-        table.append([1, 0, 0])
-        table.append([0, 1, 0])
-
-    return table
+from clovis_points import TruthTables as tt
 
 
 class Flint:
-    learning_rate = 0 #(Lithic reduction)
+    learning_rate = 0  # (Lithic reduction)
     bias = 0
     weights = None
     truth_table = None
@@ -30,10 +15,16 @@ class Flint:
     def __init__(self, learning_rate, bias, operation):
         self.learning_rate = learning_rate
         self.bias = bias
-        self.truth_table = __init_truth_table__(operation)
+        self.truth_table = self.determine_truth_table(operation)
         self.weights = list()
         for k in range(3):
             self.weights.append(random.random())  # Assigning random weights
+
+    def determine_truth_table(self, operation):
+        if operation in ['and', 'AND', '&']:
+            return tt.TruthTables.and_truth_table()
+        elif operation in ['or', 'OR', '|']:
+            return tt.TruthTables.or_truth_table()
 
     def calculate_error(self, input1, input2, expected_output):
         sigmoid_output = ActivationFunctions.sigmoid_function(input1,
@@ -59,6 +50,6 @@ class Flint:
 
         for x, y in [(0, 0), (1, 0), (0, 1), (1, 1)]:
             outp_pn = x * self.weights[0] + y * self.weights[1] + self.bias * self.weights[2]
-            # Based on the trained wieghts
+            # Based on the trained weights
             outp = 1.0 / (1 + numpy.exp(-outp_pn))
             print(str(x) + " AND " + str(y) + " yields: " + str(outp))

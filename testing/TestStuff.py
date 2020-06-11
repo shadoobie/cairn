@@ -20,6 +20,8 @@ class TestStuff:
             my_block_chain.head = my_block_chain.head.next
         pass
 
+    def test_flint_perceptrons(self):
+
 
 if __name__ == '__main__':
     test_stuff = TestStuff()
