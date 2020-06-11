@@ -12,6 +12,7 @@ class Flint:
     bias = 0
     weights = None
     truth_table = None
+    operation = None
 
     def __init__(self, learning_rate, bias, operation):
         self.learning_rate = learning_rate
@@ -23,8 +24,10 @@ class Flint:
 
     def __determine_truth_table__(self, operation):
         if operation in ['and', 'AND', '&']:
+            self.operation = 'AND'
             return tt.TruthTables.and_truth_table()
         elif operation in ['or', 'OR', '|']:
+            self.operation = 'OR'
             return tt.TruthTables.or_truth_table()
 
     def calculate_error(self, input1, input2, expected_output):
@@ -39,7 +42,6 @@ class Flint:
         self.weights[0] += error * input1 * self.learning_rate
         self.weights[1] += error * input2 * self.learning_rate
         self.weights[2] += error * self.bias * self.learning_rate
-
 
     def calcualte_error_and_modify_weights_for_case(self, case):
         error = self.calculate_error(self.truth_table[case].get('input1'),
@@ -59,4 +61,4 @@ class Flint:
             outp_pn = x * self.weights[0] + y * self.weights[1] + self.bias * self.weights[2]
             # Based on the trained weights
             outp = 1.0 / (1 + numpy.exp(-outp_pn))
-            print(str(x) + " AND " + str(y) + " yields: " + str(outp))
+            print(str(x) + " " + self.operation + " " + str(y) + " yields: " + str(outp))

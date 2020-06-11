@@ -15,8 +15,8 @@ class TruthTables:
         return or_table
 
     @staticmethod
-    def and_truth_table(self):
-        and_table = []
+    def and_truth_table():
+        and_table = {}
         a_case = {}
         index = 0
         for i1, i2, e in [(0, 0, 0), (1, 1, 1), (1, 0, 0), (0, 1, 0)]:
@@ -29,8 +29,8 @@ class TruthTables:
         return and_table
 
     @staticmethod
-    def xor_truth_table(self):
-        xor_table = []
+    def xor_truth_table():
+        xor_table = {}
         a_case = {}
         index = 0
         for i1, i2, e in [(0, 0, 0), (1, 1, 0), (1, 0, 1), (0, 1, 1)]:
@@ -43,8 +43,8 @@ class TruthTables:
         return xor_table
 
     @staticmethod
-    def not_truth_table(self):
-        not_table = []
+    def not_truth_table():
+        not_table = {}
         a_case = {}
         index = 0
         for i1, e in [(0, 1), (1, 0)]:

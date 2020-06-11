@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clovis_points/ActivationFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/clovis_points/ActivationFunctions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clovis_points/Flint.py" beforeDir="false" afterPath="$PROJECT_DIR$/clovis_points/Flint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clovis_points/TruthTables.py" beforeDir="false" afterPath="$PROJECT_DIR$/clovis_points/TruthTables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestStuff.py" afterDir="false" />
@@ -154,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591859776895</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="it runs, but something's not right.">
+      <created>1591861506221</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591861506221</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -165,17 +171,18 @@
     <MESSAGE value="added a truth table object, still working on Flint.py" />
     <MESSAGE value="made truth table methods static" />
     <MESSAGE value="add testing folder move TestStuff.py to it" />
-    <option name="LAST_COMMIT_MESSAGE" value="add testing folder move TestStuff.py to it" />
+    <MESSAGE value="it runs, but something's not right." />
+    <option name="LAST_COMMIT_MESSAGE" value="it runs, but something's not right." />
   </component>
   <component name="WindowStateProjectService">
     <state x="587" y="146" key="#xdebugger.evaluate" timestamp="1591767256569">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="587" y="146" key="#xdebugger.evaluate/0.23.1440.838@0.23.1440.838" timestamp="1591767256569" />
-    <state x="332" y="23" width="775" height="838" key="CommitChangelistDialog2" timestamp="1591859776653">
-      <screen x="0" y="23" width="1440" height="838" />
+    <state x="332" y="0" width="775" height="838" key="CommitChangelistDialog2" timestamp="1591861505896">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591858991080" />
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591861505896" />
     <state x="332" y="23" width="775" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1591689718294" />
     <state x="332" y="23" width="775" height="838" key="CommitChangelistDialog2/0.23.1440.838@0.23.1440.838" timestamp="1591859776653" />
     <state width="1398" height="397" key="GridCell.Tab.0.bottom" timestamp="1591860109542">

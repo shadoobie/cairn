@@ -24,7 +24,18 @@ class TestStuff:
         learning_rate = 1
         bias = 1
         operation = 'or'
-        iterations = 50
+        print("==========================")
+        print(operation)
+        print("==========================")
+        iterations = 500
+        or_perceptron = Flint(learning_rate, bias, operation)
+        or_perceptron.train_2_inputs_1_output_(iterations)
+
+        print("==========================")
+        operation = 'and'
+        print(operation)
+        print("==========================")
+        iterations = 1000
         or_perceptron = Flint(learning_rate, bias, operation)
         or_perceptron.train_2_inputs_1_output_(iterations)
 
