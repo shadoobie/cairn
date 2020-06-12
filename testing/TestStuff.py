@@ -29,7 +29,7 @@ class TestStuff:
         print("==========================")
         iterations = 50
         or_perceptron = Flint(learning_rate, bias, operation)
-        or_perceptron.train_2_inputs_1_output_(iterations)
+        or_perceptron.train_2_inputs_1_output(iterations)
 
         print("==========================")
         operation = 'and'
@@ -37,7 +37,15 @@ class TestStuff:
         print("==========================")
         iterations = 100
         or_perceptron = Flint(learning_rate, bias, operation)
-        or_perceptron.train_2_inputs_1_output_(iterations)
+        or_perceptron.train_2_inputs_1_output(iterations)
+
+        print("==========================")
+        operation = 'not'
+        print(operation)
+        print("==========================")
+        iterations = 200
+        not_perceptron = Flint(learning_rate, bias, operation)
+        not_perceptron.train_1_input_to_1_output(iterations)
 
 
 if __name__ == '__main__':
@@ -45,4 +53,4 @@ if __name__ == '__main__':
     print("========= Testing Simple Neural Networks Doing Some Logic ============")
     test_stuff.test_flint_perceptrons()
     print("========= Testing Simple Block Chain============")
-    test_stuff.test_the_historical_record()
+    # test_stuff.test_the_historical_record()

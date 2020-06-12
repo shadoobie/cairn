@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clovis_points/ActivationFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/clovis_points/ActivationFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clovis_points/Flint.py" beforeDir="false" afterPath="$PROJECT_DIR$/clovis_points/Flint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestStuff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591935022435</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fixed truth tables.">
+      <created>1591935632624</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1591935632624</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -185,62 +194,63 @@
     <MESSAGE value="add testing folder move TestStuff.py to it" />
     <MESSAGE value="it runs, but something's not right." />
     <MESSAGE value="fixed truth tables and or nn." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed truth tables and or nn." />
+    <MESSAGE value="fixed truth tables." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed truth tables." />
   </component>
   <component name="WindowStateProjectService">
     <state x="587" y="146" key="#xdebugger.evaluate" timestamp="1591767256569">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="587" y="146" key="#xdebugger.evaluate/0.23.1440.838@0.23.1440.838" timestamp="1591767256569" />
-    <state x="332" y="0" width="775" height="838" key="CommitChangelistDialog2" timestamp="1591935158911">
+    <state x="332" y="0" width="775" height="838" key="CommitChangelistDialog2" timestamp="1591935632500">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591935158911" />
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591935632500" />
     <state x="332" y="23" width="775" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1591689718294" />
     <state x="332" y="23" width="775" height="838" key="CommitChangelistDialog2/0.23.1440.838@0.23.1440.838" timestamp="1591859776653" />
-    <state width="1398" height="216" key="GridCell.Tab.0.bottom" timestamp="1591935085046">
+    <state width="1398" height="214" key="GridCell.Tab.0.bottom" timestamp="1591938098879">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="216" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591935085046" />
+    <state width="1398" height="214" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591938098879" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1591689304562" />
     <state width="672" height="2" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1591934303307" />
-    <state width="1398" height="216" key="GridCell.Tab.0.center" timestamp="1591935085045">
+    <state width="1398" height="214" key="GridCell.Tab.0.center" timestamp="1591938098878">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="216" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591935085045" />
+    <state width="1398" height="214" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591938098878" />
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="1398" height="216" key="GridCell.Tab.0.left" timestamp="1591935085045">
+    <state width="1398" height="214" key="GridCell.Tab.0.left" timestamp="1591938098877">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="216" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591935085045" />
+    <state width="1398" height="214" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591938098877" />
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1591689304560" />
     <state width="672" height="2" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="1398" height="216" key="GridCell.Tab.0.right" timestamp="1591935085046">
+    <state width="1398" height="214" key="GridCell.Tab.0.right" timestamp="1591938098879">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="216" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591935085046" />
+    <state width="1398" height="214" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591938098879" />
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1591934808193">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1591938084149">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591934808193" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591938084149" />
     <state width="672" height="270" key="GridCell.Tab.1.bottom/0.23.1440.838@0.23.1440.838" timestamp="1591934204442" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1591934808192">
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1591938084148">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1591934808192" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1591938084148" />
     <state width="672" height="270" key="GridCell.Tab.1.center/0.23.1440.838@0.23.1440.838" timestamp="1591934204442" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1591934808191">
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1591938084148">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1591934808191" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1591938084148" />
     <state width="672" height="270" key="GridCell.Tab.1.left/0.23.1440.838@0.23.1440.838" timestamp="1591934204441" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1591934808192">
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1591938084149">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1591934808192" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1591938084149" />
     <state width="672" height="270" key="GridCell.Tab.1.right/0.23.1440.838@0.23.1440.838" timestamp="1591934204442" />
     <state x="720" y="23" width="720" height="837" key="dock-window-1" timestamp="1591767761905">
       <screen x="0" y="23" width="1440" height="838" />
@@ -270,20 +280,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/clovis_points/Flint.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clovis_points/TruthTables.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clovis_points/TruthTables.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="10" />
+          <line>95</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>
