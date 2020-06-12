@@ -53,4 +53,4 @@ if __name__ == '__main__':
     print("========= Testing Simple Neural Networks Doing Some Logic ============")
     test_stuff.test_flint_perceptrons()
     print("========= Testing Simple Block Chain============")
-    # test_stuff.test_the_historical_record()
+    test_stuff.test_the_historical_record()
