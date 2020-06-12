@@ -9,7 +9,7 @@ from the_historical_record.BlockChain import BlockChain
 class TestStuff:
 
     def __init__(self):
-        print("why does init send pass?")
+        print("TestStuff object instantiated. Running visual confirmation tests. Need a real test framework but this will do for now.")
 
     def test_the_historical_record(self):
         my_block_chain = BlockChain()
@@ -27,7 +27,7 @@ class TestStuff:
         print("==========================")
         print(operation)
         print("==========================")
-        iterations = 500
+        iterations = 50
         or_perceptron = Flint(learning_rate, bias, operation)
         or_perceptron.train_2_inputs_1_output_(iterations)
 
@@ -35,12 +35,14 @@ class TestStuff:
         operation = 'and'
         print(operation)
         print("==========================")
-        iterations = 1000
+        iterations = 100
         or_perceptron = Flint(learning_rate, bias, operation)
         or_perceptron.train_2_inputs_1_output_(iterations)
 
 
 if __name__ == '__main__':
     test_stuff = TestStuff()
+    print("========= Testing Simple Neural Networks Doing Some Logic ============")
     test_stuff.test_flint_perceptrons()
-    # test_stuff.test_the_historical_record()
+    print("========= Testing Simple Block Chain============")
+    test_stuff.test_the_historical_record()
