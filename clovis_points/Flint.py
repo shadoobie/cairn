@@ -54,7 +54,7 @@ class Flint:
     def train_2_inputs_1_output_(self, iterations):
         for i in range(iterations):
             for n in range(4):
-                case = 'case' + str(n)
+                case = 'case' + str(n+1)
                 self.calcualte_error_and_modify_weights_for_case(case)
 
         for x, y in [(0, 0), (1, 0), (0, 1), (1, 1)]:
