@@ -1,0 +1,77 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "nn_learning_snapshot",
+   "description": "a training record for a neural network that takes a snapshot of progress",
+   "type": "object",
+
+   "properties": {
+
+      "id": {
+         "description": "a uuid, as the unique identifier for this snapshot",
+         "type": "unique"
+      },
+
+      "name": {
+         "description": "maybe give each snapshot a name? idk.",
+         "type": "string"
+      },
+
+      "nn_class":  {
+         "description": "which neural network class are you using?",
+         "type": "string"
+       },
+
+      "operation":  {
+         "description": "what is the name of the operation being taught to the neural network",
+         "type": "string"
+       },
+
+      "learning_rate":  {
+         "description": "learning rate",
+         "type": "real"
+       },
+
+      "bias":  {
+         "description": "bias",
+         "type": "string"
+       },
+
+      "activation_function":  {
+         "description": "activation function",
+         "type": "string"
+       },
+
+      "weight_modification_functions":  {
+         "description": "for each weight, what is the modification function",
+         "type": "array of string"
+       },
+
+       "weight_initialization_functions": {
+         "description": "for each weight, what is the modification function",
+         "type": "array of string"
+       },
+
+      "starting_weights":  {
+         "description": "keep track of where the weight values started",
+         "type": "array of real"
+       },
+
+      "learning_history":  {
+         "description": "a collection of each of the learning records, one for each training iteration",
+         "type": "learning_record"
+       }
+   },
+   "required": [
+                    "id",
+                    "nn_class",
+                    "operation",
+                    "learning_rate",
+                    "bias",
+                    "activation_function",
+                    "weight_modification_functions",
+                    "weight_initialization_functions",
+                    "weight_initialization_functions",
+                    "starting_weights",
+                    "learning_history"
+               ]
+}

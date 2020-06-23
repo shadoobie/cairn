@@ -1,5 +1,6 @@
 {
   "nn_learning_snapshot": {
+    "id": null,
     "name": "",
     "nn_class": "",
     "operation": "",
@@ -7,6 +8,7 @@
     "bias": 0,
     "activation_function": "",
     "weight_modification_functions": [],
+    "starting_weights":[],
     "learning_history": [
       {"learning_record":
       {
