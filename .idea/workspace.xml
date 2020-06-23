@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/testing/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestStuff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/nn_learning_snapshot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clovis_points/Flint.py" beforeDir="false" afterPath="$PROJECT_DIR$/clovis_points/Flint.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +53,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change Language" value="JSON" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\workspaces\cairn\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/testing" />
     </key>
@@ -188,6 +220,17 @@
     <option name="localTasksCounter" value="14" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create README.md for block chain project" />
     <MESSAGE value="test works for blockchain now." />
@@ -213,6 +256,10 @@
     <state x="332" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591938191971" />
     <state x="332" y="23" width="775" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1591689718294" />
     <state x="332" y="23" width="775" height="838" key="CommitChangelistDialog2/0.23.1440.838@0.23.1440.838" timestamp="1591859776653" />
+    <state x="1060" y="462" key="FileChooserDialogImpl" timestamp="1592891255278">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1060" y="462" key="FileChooserDialogImpl/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1592891255278" />
     <state width="1398" height="214" key="GridCell.Tab.0.bottom" timestamp="1591938128774">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -257,19 +304,21 @@
     </state>
     <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1591938084149" />
     <state width="672" height="270" key="GridCell.Tab.1.right/0.23.1440.838@0.23.1440.838" timestamp="1591934204442" />
-    <state x="720" y="23" width="720" height="837" key="dock-window-1" timestamp="1591767761905">
-      <screen x="0" y="23" width="1440" height="838" />
+    <state x="2560" y="0" width="1921" height="1167" key="dock-window-1" timestamp="1592889976704">
+      <screen x="2560" y="0" width="1920" height="1080" />
     </state>
     <state x="720" y="23" width="720" height="837" key="dock-window-1/0.23.1440.838@0.23.1440.838" timestamp="1591767761905" />
+    <state x="2560" y="0" width="1921" height="1167" key="dock-window-1/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1592889976704" />
     <state x="720" y="23" width="720" height="837" key="dock-window-2" timestamp="1591934724361">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="720" y="23" width="720" height="837" key="dock-window-2/0.0.1440.900@0.0.1440.900" timestamp="1591934724361" />
     <state x="720" y="23" width="720" height="837" key="dock-window-2/0.23.1440.838@0.23.1440.838" timestamp="1591934112144" />
-    <state x="427" y="82" width="586" height="735" key="find.popup" timestamp="1591860309293">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="759" y="131" width="1042" height="1176" key="find.popup" timestamp="1592890731459">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="427" y="82" width="586" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1591860309293" />
+    <state x="759" y="131" width="1042" height="1176" key="find.popup/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1592890731459" />
     <state x="745" y="185" width="670" height="676" key="search.everywhere.popup" timestamp="1591771788204">
       <screen x="0" y="23" width="1440" height="838" />
     </state>

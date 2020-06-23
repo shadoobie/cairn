@@ -34,11 +34,11 @@ class Flint:
             return tt.TruthTables.not_truth_table()
 
     def calculate_error(self, input1, input2, expected_output):
-        sigmoid_output = af.ActivationFunctions.sigmoid_function(input1,
+        actual_output = af.ActivationFunctions.sigmoid_function(input1,
                                                                  input2,
                                                                  self.bias,
                                                                  self.weights)
-        error = expected_output - sigmoid_output
+        error = expected_output - actual_output
         return error
 
     def calculate_error_for_not(self, input1, expected_output):
