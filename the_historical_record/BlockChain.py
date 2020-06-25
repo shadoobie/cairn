@@ -3,7 +3,7 @@ from the_historical_record.Block import Block
 
 class BlockChain:
     diff = 20
-    maxNonce = 2 ** 20
+    maxNonce = 2 ** 10
     target = 2 ** (256 - diff)
 
     block = Block("genesis")
