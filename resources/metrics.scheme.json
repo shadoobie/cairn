@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "metrics",
+  "description": "a set of metrics and values for a neural network",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "a uuid, as the unique identifier for this set of metrics",
+      "type": "unique"
+    },
+    "weights": {
+      "description": "an array of weights",
+      "type": "json_array"
+    },
+    "input1": {
+      "description": "",
+      "type": ""
+    },
+    "input2": {
+      "description": "",
+      "type": ""
+    },
+    "expected_output": {
+      "description": "",
+      "type": ""
+    },
+    "actual_output": {
+      "description": "",
+      "type": ""
+    },
+    "error": {
+      "description": "",
+      "type": ""
+    }
+  },
+  "required": [
+    "id", "input1", "input2", "expected_output", "actual_output", "error"
+  ]
+}
