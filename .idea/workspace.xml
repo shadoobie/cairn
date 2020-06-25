@@ -25,12 +25,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="json shenanigans ready for testing, supposedly valid. probably don't need two sub schema files?">
-      <change beforePath="$PROJECT_DIR$/.idea/cairn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cairn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestStuff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_historical_record/BlockChain.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_historical_record/BlockChain.py" afterDir="false" />
-    </list>
+    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="added some json stuff and a crappy unit test for it too." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593062070910</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added some json stuff and a crappy unit test for it too.">
+      <created>1593069163741</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1593069163741</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,7 +276,8 @@
     <MESSAGE value="json shenanigans" />
     <MESSAGE value="json shenanigans - wip" />
     <MESSAGE value="json shenanigans ready for testing, supposedly valid. probably don't need two sub schema files?" />
-    <option name="LAST_COMMIT_MESSAGE" value="json shenanigans ready for testing, supposedly valid. probably don't need two sub schema files?" />
+    <MESSAGE value="added some json stuff and a crappy unit test for it too." />
+    <option name="LAST_COMMIT_MESSAGE" value="added some json stuff and a crappy unit test for it too." />
   </component>
   <component name="WindowStateProjectService">
     <state x="985" y="522" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592892666944">
@@ -295,34 +298,34 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="486" y="365" width="440" height="843" key="FileChooserDialogImpl/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593064046240" />
-    <state width="2539" height="413" key="GridCell.Tab.0.bottom" timestamp="1593069073220">
+    <state width="2539" height="413" key="GridCell.Tab.0.bottom" timestamp="1593069167620">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591938128774" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1591689304562" />
     <state width="672" height="2" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1591934303307" />
-    <state width="2539" height="413" key="GridCell.Tab.0.bottom/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069073220" />
-    <state width="2539" height="413" key="GridCell.Tab.0.center" timestamp="1593069073220">
+    <state width="2539" height="413" key="GridCell.Tab.0.bottom/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069167620" />
+    <state width="2539" height="413" key="GridCell.Tab.0.center" timestamp="1593069167620">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591938128773" />
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="413" key="GridCell.Tab.0.center/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069073220" />
-    <state width="2539" height="413" key="GridCell.Tab.0.left" timestamp="1593069073220">
+    <state width="2539" height="413" key="GridCell.Tab.0.center/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069167620" />
+    <state width="2539" height="413" key="GridCell.Tab.0.left" timestamp="1593069167619">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591938128772" />
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1591689304560" />
     <state width="672" height="2" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="413" key="GridCell.Tab.0.left/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069073220" />
-    <state width="2539" height="413" key="GridCell.Tab.0.right" timestamp="1593069073220">
+    <state width="2539" height="413" key="GridCell.Tab.0.left/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069167619" />
+    <state width="2539" height="413" key="GridCell.Tab.0.right" timestamp="1593069167620">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591938128773" />
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="413" key="GridCell.Tab.0.right/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069073220" />
+    <state width="2539" height="413" key="GridCell.Tab.0.right/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069167620" />
     <state width="2539" height="508" key="GridCell.Tab.1.bottom" timestamp="1593066380029">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -355,11 +358,11 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="827" y="412" key="com.intellij.javaee.MapExternalResourceDialog/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593063226973" />
-    <state x="-524" y="90" width="529" height="844" key="dock-window-1" timestamp="1593065724354">
+    <state x="-871" y="98" width="529" height="844" key="dock-window-1" timestamp="1593069642439">
       <screen x="-1920" y="3" width="1920" height="1080" />
     </state>
     <state x="720" y="23" width="720" height="837" key="dock-window-1/0.23.1440.838@0.23.1440.838" timestamp="1591767761905" />
-    <state x="-524" y="90" width="529" height="844" key="dock-window-1/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593065724354" />
+    <state x="-871" y="98" width="529" height="844" key="dock-window-1/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593069642439" />
     <state x="720" y="23" width="720" height="837" key="dock-window-2" timestamp="1591934724361">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
