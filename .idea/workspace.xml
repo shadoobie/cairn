@@ -25,11 +25,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="tweaked the training iterations per thoughts about mastery criteria">
+    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="removing old versions of component json object schemas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestStuff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_historical_record/Block.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_historical_record/Block.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/the_historical_record/BlockChain.py" beforeDir="false" afterPath="$PROJECT_DIR$/the_historical_record/BlockChain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/nn_learning_snapshot.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/nn_learning_snapshot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/nn_learning_snapshot.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/nn_learning_snapshot.schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +293,28 @@
       <option name="project" value="LOCAL" />
       <updated>1593139668798</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="i think json test is actually validating json object against json schema now and finding it not valid.">
+      <created>1593144365190</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1593144365190</updated>
+    </task>
+    <task id="LOCAL-00022" summary="i think json test is actually validating json object against json schema now and finding it not valid.">
+      <created>1593144400597</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1593144400597</updated>
+    </task>
+    <task id="LOCAL-00023" summary="removing old versions of component json object schemas">
+      <created>1593144478488</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1593144478488</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,7 +348,9 @@
     <MESSAGE value="ugh, damn ide files still in the repo. too tired to care right now." />
     <MESSAGE value="working on json schema again" />
     <MESSAGE value="tweaked the training iterations per thoughts about mastery criteria" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweaked the training iterations per thoughts about mastery criteria" />
+    <MESSAGE value="i think json test is actually validating json object against json schema now and finding it not valid." />
+    <MESSAGE value="removing old versions of component json object schemas" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing old versions of component json object schemas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="985" y="522" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592892666944">
@@ -349,34 +371,34 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="486" y="365" width="440" height="843" key="FileChooserDialogImpl/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593064046240" />
-    <state width="2539" height="413" key="GridCell.Tab.0.bottom" timestamp="1593144279492">
+    <state width="2539" height="580" key="GridCell.Tab.0.bottom" timestamp="1593145037862">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591938128774" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1591689304562" />
     <state width="672" height="2" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1591934303307" />
-    <state width="2539" height="413" key="GridCell.Tab.0.bottom/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593144279492" />
-    <state width="2539" height="413" key="GridCell.Tab.0.center" timestamp="1593144279492">
+    <state width="2539" height="580" key="GridCell.Tab.0.bottom/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593145037862" />
+    <state width="2539" height="580" key="GridCell.Tab.0.center" timestamp="1593145037861">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591938128773" />
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="413" key="GridCell.Tab.0.center/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593144279492" />
-    <state width="2539" height="413" key="GridCell.Tab.0.left" timestamp="1593144279492">
+    <state width="2539" height="580" key="GridCell.Tab.0.center/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593145037861" />
+    <state width="2539" height="580" key="GridCell.Tab.0.left" timestamp="1593145037861">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591938128772" />
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1591689304560" />
     <state width="672" height="2" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="413" key="GridCell.Tab.0.left/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593144279492" />
-    <state width="2539" height="413" key="GridCell.Tab.0.right" timestamp="1593144279492">
+    <state width="2539" height="580" key="GridCell.Tab.0.left/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593145037861" />
+    <state width="2539" height="580" key="GridCell.Tab.0.right" timestamp="1593145037861">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591938128773" />
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="413" key="GridCell.Tab.0.right/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593144279492" />
+    <state width="2539" height="580" key="GridCell.Tab.0.right/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593145037861" />
     <state width="2539" height="508" key="GridCell.Tab.1.bottom" timestamp="1593143945027">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
