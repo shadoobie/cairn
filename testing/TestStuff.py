@@ -37,7 +37,7 @@ class TestStuff(unittest.TestCase):
         print("==========================")
         print(operation)
         print("==========================")
-        iterations = 50
+        iterations = 200
         or_perceptron = Flint(learning_rate, bias, operation)
         or_perceptron.train_2_inputs_1_output(iterations)
 

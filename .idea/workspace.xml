@@ -25,10 +25,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="ugh, damn ide files still in the repo. too tired to care right now.">
+    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="working on json schema again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/metrics.scheme.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/metrics.scheme.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/nn_learning_snapshot.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/nn_learning_snapshot.schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestStuff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593069750035</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="working on json schema again">
+      <created>1593139286275</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1593139286275</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,7 +295,8 @@
     <MESSAGE value="json shenanigans ready for testing, supposedly valid. probably don't need two sub schema files?" />
     <MESSAGE value="added some json stuff and a crappy unit test for it too." />
     <MESSAGE value="ugh, damn ide files still in the repo. too tired to care right now." />
-    <option name="LAST_COMMIT_MESSAGE" value="ugh, damn ide files still in the repo. too tired to care right now." />
+    <MESSAGE value="working on json schema again" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on json schema again" />
   </component>
   <component name="WindowStateProjectService">
     <state x="985" y="522" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592892666944">
