@@ -16,25 +16,29 @@
                "description":"an array of weights",
                "type":"json_array"
             },
-            "input1":{
-               "description":"",
-               "type":""
-            },
-            "input2":{
-               "description":"",
-               "type":""
+            "inputs":{
+               "description":"an array of all of the input values",
+               "type":"array"
             },
             "expected_output":{
-               "description":"",
-               "type":""
+               "description":"the output that we want the neural network to produce.",
+               "type":"array"
             },
             "actual_output":{
-               "description":"",
-               "type":""
+               "description":"the output that the neural network just produced",
+               "type":"array"
             },
             "error":{
-               "description":"",
-               "type":""
+               "description":"the delta between actual_output and expected_output (error = expected_output - sigmoid_output)",
+               "type":"array"
+            },
+            "mastered": {
+                "description": "this value starts false, until the neural network has mastered the learning process, then it becomes true.",
+                "type": "boolean"
+            },
+            "mastery_criteria": {
+                "description": "how we know that the neural network has mastered it's training.",
+                "type": "string"
             }
          },
          "required":[
@@ -43,7 +47,9 @@
             "input2",
             "expected_output",
             "actual_output",
-            "error"
+            "error",
+            "mastered",
+            "mastery_criteria"
          ]
       },
       "learning_record":{
@@ -60,6 +66,7 @@
                "type":"integer"
             },
             "metrics":{
+               "$ref":"#/definitions/metrics",
                "description":"neural network metrics and values",
                "type":"object"
             }
@@ -114,7 +121,7 @@
       },
       "learning_history":{
          "description":"a collection of each of the learning records, one for each training iteration",
-         "type":"learning_record"
+         "type":"json_array"
       }
    },
    "required":[

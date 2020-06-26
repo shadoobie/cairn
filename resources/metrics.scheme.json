@@ -31,9 +31,17 @@
     "error": {
       "description": "",
       "type": ""
+    },
+    "mastery_threshold": {
+      "description": "",
+      "type": "boolean"
+    },
+    "mastery_criteria": {
+      "description": "",
+      "type": "string"
     }
   },
   "required": [
-    "id", "input1", "input2", "expected_output", "actual_output", "error"
+    "id", "input1", "input2", "expected_output", "actual_output", "error", "mastery_threshold", "mastery_criteria"
   ]
 }
