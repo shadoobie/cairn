@@ -1,3 +1,6 @@
+# import sys
+# sys.path.append('.')
+# sys.path.append('..')
 import datetime
 import hashlib
 

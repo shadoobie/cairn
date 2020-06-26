@@ -1,26 +1,28 @@
-import sys, json, unittest
+import sys, json, jsonschema, unittest, the_historical_record
+
+from testing.TestUtilities import TestUtilities
 
 sys.path.append('.')
 sys.path.append('..')
-from clovis_points.Flint import Flint
+
+import clovis_points.Flint
 from the_historical_record.Block import Block
-from the_historical_record.BlockChain import BlockChain
-
-
+from the_historical_record import BlockChain
+from jsonschema import validate
 
 
 class TestStuff(unittest.TestCase):
+    utils = TestUtilities()
 
     def test_the_historical_record(self):
         print("=======================================================================================================")
         print(" test_the_historical_record ")
-        my_block_chain = BlockChain()
+        my_block_chain = the_historical_record.BlockChain.BlockChain()
         for n in range(10):
             my_block_chain.mine(Block("Block " + str(n + 1)))
         while my_block_chain.head is not None:
             print(my_block_chain.head)
             my_block_chain.head = my_block_chain.head.next
-
 
         print("test_the_historical_record mined a hash,test passes, but needs assertions.")
         print("=======================================================================================================")
@@ -38,7 +40,7 @@ class TestStuff(unittest.TestCase):
         print(operation)
         print("==========================")
         iterations = 200
-        or_perceptron = Flint(learning_rate, bias, operation)
+        or_perceptron = clovis_points.Flint.Flint(learning_rate, bias, operation)
         or_perceptron.train_2_inputs_1_output(iterations)
 
         print("==========================")
@@ -46,7 +48,7 @@ class TestStuff(unittest.TestCase):
         print(operation)
         print("==========================")
         iterations = 100
-        or_perceptron = Flint(learning_rate, bias, operation)
+        or_perceptron = clovis_points.Flint.Flint(learning_rate, bias, operation)
         or_perceptron.train_2_inputs_1_output(iterations)
 
         print("==========================")
@@ -54,7 +56,7 @@ class TestStuff(unittest.TestCase):
         print(operation)
         print("==========================")
         iterations = 200
-        not_perceptron = Flint(learning_rate, bias, operation)
+        not_perceptron = clovis_points.Flint.Flint(learning_rate, bias, operation)
         not_perceptron.train_1_input_to_1_output(iterations)
 
         # TODO need assertions and rounding to verify the NNs approached either 0 or 1 correctly.
@@ -62,38 +64,25 @@ class TestStuff(unittest.TestCase):
         print("=======================================================================================================")
         pass
 
-    def test_json_nn_learning_snapshot_schema_loads(self):
+
+
+    def test_nn_learning_snapshot_valid_against_schema(self):
         # TODO: this test needs a lot of tlc, schema specific validation and object validation to the schema
         print("=======================================================================================================")
-        print(" test_json_nn_learning_snapshot_schema_loads ")
-        data = None
-        thing = None
-        nn_snapshot_object = None
-        nn_snapshot_schema = None
+        print(" test_nn_learning_snapshot_valid_against_schema ")
 
-        json_schema = "C://Users//Owner//workspaces//cairn//resources//nn_learning_snapshot.schema.json"
-        json_object_thing = "C://Users//Owner//workspaces//cairn//resources//nn_learning_snapshot.json"
-        # read json schema file
-        with open(json_schema) as myfile:
-            data = myfile.read()
+        # first open the schema file into a data string object and
+        nn_learning_snapshot_schema_location = "C://Users//Owner//workspaces//cairn//resources//nn_learning_snapshot.schema.json"
+        schema_data = ""
+        with open(nn_learning_snapshot_schema_location) as schema_file:
+            nn_snapshot_schema = self.utils.load_json_file(schema_file)
+            print('successfully loaded: ' + nn_learning_snapshot_schema_location)
 
-        if data is not None:
-            try:
-                nn_snapshot_schema = json.loads(data)
-                # self.fail("hahahahahah")
-                print("test_json_nn_learning_snapshot_schema_loads passes, schema is apparently valid json.")
-
-            except ValueError:
-                print("ValueError thrown when trying to load json schema file ( " + json_schema + " )")
-            except AttributeError:
-                print("AttributeError when trying to load json schema file ( " + json_schema + " )")
-            except:
-                print("something else went wrong when trying to load json schema file ( " + json_schema + " )")
-
-        with open(json_object_thing) as thingfile:
-            blah = thingfile.read()
-            nn_snapshot_object = json.loads(blah)
-
+            nn_learning_snapshot_object_to_validate_against_schema_location = "C://Users//Owner//workspaces//cairn//resources//nn_learning_snapshot.json"
+            with open(nn_learning_snapshot_object_to_validate_against_schema_location) as object_file:
+                nn_snapshot_object = self.utils.load_json_file(object_file)
+                results = validate(nn_snapshot_object, nn_snapshot_schema)
+                print("test_nn_learning_snapshot_valid_against_schema results: " + results)
 
         print("=======================================================================================================")
         pass
