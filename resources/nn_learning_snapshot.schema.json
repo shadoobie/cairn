@@ -9,12 +9,12 @@
          "type":"object",
          "properties":{
             "id":{
-               "description":"a uuid, as the unique identifier for this set of metrics",
-               "type":"unique"
+               "description":"a uuid, as the string identifier for this set of metrics",
+               "type":"name"
             },
             "weights":{
                "description":"an array of weights",
-               "type":"json_array"
+               "type":"array"
             },
             "inputs":{
                "description":"an array of all of the input values",
@@ -58,8 +58,8 @@
          "type":"object",
          "properties":{
             "id":{
-               "description":"a uuid, as the unique identifier for this learning_record",
-               "type":"unique"
+               "description":"a uuid, as the string identifier for this learning_record",
+               "type":"name"
             },
             "iteration":{
                "description":"",
@@ -80,8 +80,8 @@
    },
    "properties":{
       "id":{
-         "description":"a uuid, as the unique identifier for this snapshot",
-         "type":"unique"
+         "description":"a uuid, as the string identifier for this snapshot",
+         "type":"name"
       },
       "name":{
          "description":"maybe give each snapshot a name? idk.",
@@ -97,7 +97,7 @@
       },
       "learning_rate":{
          "description":"learning rate",
-         "type":"real"
+         "type":"number"
       },
       "bias":{
          "description":"bias",
@@ -109,19 +109,19 @@
       },
       "weight_modification_functions":{
          "description":"for each weight, what is the modification function",
-         "type":"array of string"
+         "type":"array"
       },
       "weight_initialization_functions":{
          "description":"for each weight, what is the modification function",
-         "type":"array of string"
+         "type":"array"
       },
       "starting_weights":{
          "description":"keep track of where the weight values started",
-         "type":"array of real"
+         "type":"array"
       },
       "learning_history":{
          "description":"a collection of each of the learning records, one for each training iteration",
-         "type":"json_array"
+         "type":"array"
       }
    },
    "required":[
