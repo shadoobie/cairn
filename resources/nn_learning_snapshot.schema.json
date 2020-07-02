@@ -101,7 +101,7 @@
     },
     "bias": {
       "description": "bias",
-      "type": "string"
+      "type": "number"
     },
     "activation_function": {
       "description": "activation function",
