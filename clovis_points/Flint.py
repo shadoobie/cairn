@@ -1,7 +1,5 @@
-from random import random
-
 import numpy
-import random
+from numpy import random
 
 from clovis_points import ActivationFunctions as af
 from clovis_points import TruthTables as tt
