@@ -1,140 +1,140 @@
 {
-   "$schema":"http://json-schema.org/draft-04/schema#",
-   "title":"nn_learning_snapshot",
-   "description":"a training record for a neural network that takes a snapshot of all progress to 'date' or iteration.",
-   "type":"object",
-   "definitions":{
-      "metrics":{
-         "description":"a set of metrics and values for a neural network",
-         "type":"object",
-         "properties":{
-            "id":{
-               "description":"a uuid, as the string identifier for this set of metrics",
-               "type":"string"
-            },
-            "weights":{
-               "description":"an array of weights",
-               "type":"array"
-            },
-            "inputs":{
-               "description":"an array of all of the input values",
-               "type":"array"
-            },
-            "expected_output":{
-               "description":"the output that we want the neural network to produce.",
-               "type":"array"
-            },
-            "actual_output":{
-               "description":"the output that the neural network just produced",
-               "type":"array"
-            },
-            "error":{
-               "description":"the delta between actual_output and expected_output (error = expected_output - sigmoid_output)",
-               "type":"array"
-            },
-            "mastered": {
-                "description": "this value starts false, until the neural network has mastered the learning process, then it becomes true.",
-                "type": "boolean"
-            },
-            "mastery_criteria": {
-                "description": "how we know that the neural network has mastered it's training.",
-                "type": "string"
-            }
-         },
-         "required":[
-            "id",
-            "input1",
-            "input2",
-            "expected_output",
-            "actual_output",
-            "error",
-            "mastered",
-            "mastery_criteria"
-         ]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "nn_learning_snapshot",
+  "description": "a training record for a neural network that takes a snapshot of all progress to 'date' or iteration.",
+  "type": "object",
+  "definitions": {
+    "metrics": {
+      "description": "a set of metrics and values for a neural network",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "a uuid, as the string identifier for this set of metrics",
+          "type": "string"
+        },
+        "weights": {
+          "description": "an array of weights",
+          "type": "array"
+        },
+        "inputs": {
+          "description": "an array of all of the input values",
+          "type": "array"
+        },
+        "expected_output": {
+          "description": "the output that we want the neural network to produce.",
+          "type": "array"
+        },
+        "actual_output": {
+          "description": "the output that the neural network just produced",
+          "type": "array"
+        },
+        "error": {
+          "description": "the delta between actual_output and expected_output (error = expected_output - sigmoid_output)",
+          "type": "array"
+        },
+        "mastered": {
+          "description": "this value starts false, until the neural network has mastered the learning process, then it becomes true.",
+          "type": "boolean"
+        },
+        "mastery_criteria": {
+          "description": "how we know that the neural network has mastered it's training.",
+          "type": "string"
+        }
       },
-      "learning_record":{
-         "title":"learning_record",
-         "description":"a single training record for a neural network",
-         "type":"object",
-         "properties":{
-            "id":{
-               "description":"a uuid, as the string identifier for this learning_record",
-               "type":"string"
-            },
-            "iteration":{
-               "description":"",
-               "type":"integer"
-            },
-            "metrics":{
-               "$ref":"#/definitions/metrics",
-               "description":"neural network metrics and values",
-               "type":"object"
-            }
-         },
-         "required":[
-            "id",
-            "iteration",
-            "metrics"
-         ]
-      }
-   },
-   "properties":{
-      "id":{
-         "description":"a uuid, as the string identifier for this snapshot",
-         "type":"string"
+      "required": [
+        "id",
+        "weights",
+        "inputs",
+        "expected_output",
+        "actual_output",
+        "error",
+        "mastered",
+        "mastery_criteria"
+      ]
+    },
+    "learning_record": {
+      "title": "learning_record",
+      "description": "a single training record for a neural network",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "a uuid, as the string identifier for this learning_record",
+          "type": "string"
+        },
+        "iteration": {
+          "description": "",
+          "type": "integer"
+        },
+        "metrics": {
+          "$ref": "#/definitions/metrics",
+          "description": "neural network metrics and values",
+          "type": "object"
+        }
       },
-      "name":{
-         "description":"maybe give each snapshot a name? idk.",
-         "type":"string"
-      },
-      "nn_class":{
-         "description":"which neural network class are you using?",
-         "type":"string"
-      },
-      "operation":{
-         "description":"what is the name of the operation being taught to the neural network",
-         "type":"string"
-      },
-      "learning_rate":{
-         "description":"learning rate",
-         "type":"number"
-      },
-      "bias":{
-         "description":"bias",
-         "type":"string"
-      },
-      "activation_function":{
-         "description":"activation function",
-         "type":"string"
-      },
-      "weight_modification_functions":{
-         "description":"for each weight, what is the modification function",
-         "type":"array"
-      },
-      "weight_initialization_functions":{
-         "description":"for each weight, what is the modification function",
-         "type":"array"
-      },
-      "starting_weights":{
-         "description":"keep track of where the weight values started",
-         "type":"array"
-      },
-      "learning_history":{
-         "description":"a collection of each of the learning records, one for each training iteration",
-         "type":"array"
-      }
-   },
-   "required":[
-      "id",
-      "name",
-      "nn_class",
-      "operation",
-      "learning_rate",
-      "bias",
-      "activation_function",
-      "weight_modification_functions",
-      "weight_initialization_functions",
-      "starting_weights",
-      "learning_history"
-   ]
+      "required": [
+        "id",
+        "iteration",
+        "metrics"
+      ]
+    }
+  },
+  "properties": {
+    "id": {
+      "description": "a uuid, as the string identifier for this snapshot",
+      "type": "string"
+    },
+    "name": {
+      "description": "maybe give each snapshot a name? idk.",
+      "type": "string"
+    },
+    "nn_class": {
+      "description": "which neural network class are you using?",
+      "type": "string"
+    },
+    "operation": {
+      "description": "what is the name of the operation being taught to the neural network",
+      "type": "string"
+    },
+    "learning_rate": {
+      "description": "learning rate",
+      "type": "number"
+    },
+    "bias": {
+      "description": "bias",
+      "type": "string"
+    },
+    "activation_function": {
+      "description": "activation function",
+      "type": "string"
+    },
+    "weight_modification_functions": {
+      "description": "for each weight, what is the modification function",
+      "type": "array"
+    },
+    "weight_initialization_functions": {
+      "description": "for each weight, what is the modification function",
+      "type": "array"
+    },
+    "starting_weights": {
+      "description": "keep track of where the weight values started",
+      "type": "array"
+    },
+    "learning_history": {
+      "description": "a collection of each of the learning records, one for each training iteration",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "nn_class",
+    "operation",
+    "learning_rate",
+    "bias",
+    "activation_function",
+    "weight_modification_functions",
+    "weight_initialization_functions",
+    "starting_weights",
+    "learning_history"
+  ]
 }
