@@ -10,7 +10,7 @@
          "properties":{
             "id":{
                "description":"a uuid, as the string identifier for this set of metrics",
-               "type":"name"
+               "type":"string"
             },
             "weights":{
                "description":"an array of weights",
@@ -59,7 +59,7 @@
          "properties":{
             "id":{
                "description":"a uuid, as the string identifier for this learning_record",
-               "type":"name"
+               "type":"string"
             },
             "iteration":{
                "description":"",
@@ -81,7 +81,7 @@
    "properties":{
       "id":{
          "description":"a uuid, as the string identifier for this snapshot",
-         "type":"name"
+         "type":"string"
       },
       "name":{
          "description":"maybe give each snapshot a name? idk.",
@@ -126,13 +126,13 @@
    },
    "required":[
       "id",
+      "name",
       "nn_class",
       "operation",
       "learning_rate",
       "bias",
       "activation_function",
       "weight_modification_functions",
-      "weight_initialization_functions",
       "weight_initialization_functions",
       "starting_weights",
       "learning_history"
