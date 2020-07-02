@@ -18,6 +18,28 @@
       4,
       3
     ],
-    "learning_history": []
+    "learning_history": [
+      {
+        "id": "hmdfs978asdf789huiasdfhkjasdf897sdaf897mm",
+        "iteration": 0,
+        "metrics": {
+          "id": "mmmh",
+          "weights": [
+            1,
+            2,
+            3
+          ],
+          "inputs": [
+            0,
+            0
+          ],
+          "expected_output": [],
+          "actual_output": [],
+          "error": [],
+          "mastered": true,
+          "mastery_criteria": "blah"
+        }
+      }
+    ]
   }
 }
