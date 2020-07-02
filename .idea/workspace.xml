@@ -25,10 +25,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="test driven something or idk">
+    <list default="true" id="8c35c644-7ba4-463a-9a9a-3e677e7397b1" name="Default Changelist" comment="okay">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/nn_learning_snapshot.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/nn_learning_snapshot.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/nn_learning_snapshot.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/nn_learning_snapshot.schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/TestStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/TestStuff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +355,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593669413638</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="well i got it working with better help from jsonschemavalidator.net anyway">
+      <created>1593669664187</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1593669664187</updated>
+    </task>
+    <task id="LOCAL-00031" summary="okay">
+      <created>1593669758208</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1593669758208</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -372,8 +385,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create README.md for block chain project" />
-    <MESSAGE value="test works for blockchain now." />
     <MESSAGE value="found a theme for this neural network project" />
     <MESSAGE value="bifacial percussion flaking a flint clovis point for logic." />
     <MESSAGE value="added a truth table object, still working on Flint.py" />
@@ -397,7 +408,9 @@
     <MESSAGE value="test driven json something or another" />
     <MESSAGE value="format and other confusing stuff" />
     <MESSAGE value="test driven something or idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="test driven something or idk" />
+    <MESSAGE value="well i got it working with better help from jsonschemavalidator.net anyway" />
+    <MESSAGE value="okay" />
+    <option name="LAST_COMMIT_MESSAGE" value="okay" />
   </component>
   <component name="WindowStateProjectService">
     <state x="985" y="522" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592892666944">
@@ -418,34 +431,34 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="486" y="365" width="440" height="843" key="FileChooserDialogImpl/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593064046240" />
-    <state width="2539" height="495" key="GridCell.Tab.0.bottom" timestamp="1593669420929">
+    <state width="2539" height="495" key="GridCell.Tab.0.bottom" timestamp="1593669772964">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591938128774" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1591689304562" />
     <state width="672" height="2" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1591934303307" />
-    <state width="2539" height="495" key="GridCell.Tab.0.bottom/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669420929" />
-    <state width="2539" height="495" key="GridCell.Tab.0.center" timestamp="1593669420928">
+    <state width="2539" height="495" key="GridCell.Tab.0.bottom/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669772964" />
+    <state width="2539" height="495" key="GridCell.Tab.0.center" timestamp="1593669772963">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591938128773" />
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="495" key="GridCell.Tab.0.center/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669420928" />
-    <state width="2539" height="495" key="GridCell.Tab.0.left" timestamp="1593669420928">
+    <state width="2539" height="495" key="GridCell.Tab.0.center/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669772963" />
+    <state width="2539" height="495" key="GridCell.Tab.0.left" timestamp="1593669772963">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591938128772" />
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1591689304560" />
     <state width="672" height="2" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="495" key="GridCell.Tab.0.left/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669420928" />
-    <state width="2539" height="495" key="GridCell.Tab.0.right" timestamp="1593669420929">
+    <state width="2539" height="495" key="GridCell.Tab.0.left/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669772963" />
+    <state width="2539" height="495" key="GridCell.Tab.0.right" timestamp="1593669772964">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1398" height="214" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591938128773" />
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1591689304561" />
     <state width="672" height="2" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1591934303306" />
-    <state width="2539" height="495" key="GridCell.Tab.0.right/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669420929" />
+    <state width="2539" height="495" key="GridCell.Tab.0.right/2560.0.1920.1080/-1920.3.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1593669772964" />
     <state width="2539" height="508" key="GridCell.Tab.1.bottom" timestamp="1593145374486">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

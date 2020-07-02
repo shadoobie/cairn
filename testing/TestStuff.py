@@ -81,8 +81,13 @@ class TestStuff(unittest.TestCase):
             nn_learning_snapshot_object_to_validate_against_schema_location = "C://Users//Owner//workspaces//cairn//resources//nn_learning_snapshot.json"
             with open(nn_learning_snapshot_object_to_validate_against_schema_location) as object_file:
                 nn_snapshot_object = self.utils.load_json_file(object_file)
+                print('successfully loaded: ' + nn_learning_snapshot_object_to_validate_against_schema_location)
                 validate(nn_snapshot_object, nn_snapshot_schema)
-                print("test_nn_learning_snapshot_valid_against_schema done, prbably valid if you see this.")
+                print("validating " + nn_learning_snapshot_object_to_validate_against_schema_location +
+                      " against the schema file " +
+                      nn_learning_snapshot_schema_location +
+                      " and since you're seeing this, i think it's considered valid.")
+                print("test_nn_learning_snapshot_valid_against_schema done.")
 
         print("=======================================================================================================")
         pass
