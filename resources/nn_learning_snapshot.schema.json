@@ -103,6 +103,10 @@
       "description": "bias",
       "type": "number"
     },
+    "activation_function_name": {
+      "description": "name of the activation function",
+      "type": "string"
+    },
     "activation_function": {
       "description": "activation function",
       "type": "string"
@@ -131,6 +135,7 @@
     "operation",
     "learning_rate",
     "bias",
+    "activation_function_name",
     "activation_function",
     "weight_modification_functions",
     "weight_initialization_functions",

@@ -1,6 +1,6 @@
 import numpy, json
 from numpy import random
-
+import uuid
 import the_historical_record
 from clovis_points import ActivationFunctions as af
 from clovis_points import TruthTables as tt
@@ -15,16 +15,20 @@ class Flint:
     operation = None
     training_ledger = None
     utils = None
+    ledger_item_template = None
+    learning_record_template = None
+    data_header = None
 
     def __init__(self, learning_rate, bias, operation):
         self.utils = TestUtilities()
-        self.training_ledger = the_historical_record.BlockChain.BlockChain()
         self.learning_rate = learning_rate
         self.bias = bias
         self.truth_table = self.__determine_truth_table__(operation)
         self.weights = list()
         for k in range(3):
             self.weights.append(random.random())  # Assigning random weights
+
+        self.training_ledger = the_historical_record.BlockChain.BlockChain()
         self.__init_historical_data__()
 
     def __determine_truth_table__(self, operation):
@@ -39,18 +43,38 @@ class Flint:
             return tt.TruthTables.not_truth_table()
 
     def __init_historical_data__(self):
-        ledger_item = self.create_a_ledger_item()
+        self.ledger_item_template = self.__init_ledger_item__()
+        some_array_yo = self.ledger_item_template["learning_history"]
+        self.learning_record_template = some_array_yo[0]
+        self.data_header = self.__create_the_data_header__()
+        self.data_header['id'] = str(uuid.SafeUUID)
+        self.data_header['name'] = 'Flint Perceptron'
+        self.data_header['nn_class'] = self.__class__.__name__
+        self.data_header['operation'] = self.operation
+        self.data_header['bias'] = self.bias
+        self.data_header['activation_function_name'] = "Sigmoid function"
+        self.data_header['activation_function'] = "s(x) = 1 / 1 + e^-x = e^x / e^x + 1"
+        #TODO finish initializng the data header after clearing out the learning history from the header template
 
-
-
-    def create_a_ledger_item(self):
+    def __init_ledger_item__(self):
         a_ledger_item = None
         item_data_structure_location = "..//resources//nn_learning_snapshot.json"
+        #TODO: need to bring the schema in with it and validate it before proceeding.
         with open(item_data_structure_location) as item_data_structure:
             a_ledger_item = self.utils.load_json_file(item_data_structure)
             print('successfully loaded: ' + item_data_structure_location)
 
         return a_ledger_item
+
+    def __create_the_data_header__(self):
+        header = self.ledger_item_template.copy()
+        learning_history = header["learning_history"]
+        # clear out the learning history
+        del learning_history[0]
+        return  header
+
+    def create_a_learning_record(self):
+        return self.learning_record_template.copy()
 
     def calculate_error(self, input1, input2, expected_output):
         actual_output = af.ActivationFunctions.sigmoid_function_dual_inputs(input1,

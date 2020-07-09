@@ -5,10 +5,9 @@
     "operation": "",
     "learning_rate": 0,
     "bias": 0,
+    "activation_function_name": "",
     "activation_function": "",
-    "weight_modification_functions": [
-      ""
-    ],
+    "weight_modification_functions": [],
     "weight_initialization_functions": [],
     "starting_weights": [],
     "learning_history": [
