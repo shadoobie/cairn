@@ -1,42 +1,29 @@
 {
-    "id": "qwerty",
-    "name": "dsfasdf",
+    "id": "",
+    "name": "",
     "nn_class": "",
     "operation": "",
     "learning_rate": 0,
     "bias": 0,
     "activation_function": "",
     "weight_modification_functions": [
-      "x+y"
+      ""
     ],
-    "weight_initialization_functions": [
-      "random"
-    ],
-    "starting_weights": [
-      5,
-      4,
-      3
-    ],
+    "weight_initialization_functions": [],
+    "starting_weights": [],
     "learning_history": [
       {
-        "id": "hmdfs978asdf789huiasdfhkjasdf897sdaf897mm",
+        "id": "",
         "iteration": 0,
         "metrics": {
-          "id": "mmmh",
-          "weights": [
-            1,
-            2,
-            3
-          ],
-          "inputs": [
-            0,
-            0
-          ],
+          "id": "",
+          "weights": [],
+          "inputs": [],
           "expected_output": [],
           "actual_output": [],
           "error": [],
-          "mastered": true,
-          "mastery_criteria": "blah"
+          "mastered": false,
+          "mastery_criteria": ""
         }
       }
     ]
