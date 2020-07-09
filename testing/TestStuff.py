@@ -61,6 +61,7 @@ class TestStuff(unittest.TestCase):
         iterations = 200
         not_perceptron = clovis_points.Flint.Flint(learning_rate, bias, operation)
         not_perceptron.train_1_input_to_1_output(iterations)
+        not_perceptron.use_perceptron_with_one_input_and_one_output()
 
         # TODO need assertions and rounding to verify the NNs approached either 0 or 1 correctly.
         print("test_flint_perceptrons passes but needs assertions")

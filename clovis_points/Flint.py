@@ -81,16 +81,13 @@ class Flint:
             output = af.ActivationFunctions.sigmoid_function_dual_inputs(x, y, self.bias, self.weights)
             print(str(x) + " " + self.operation + " " + str(y) + " yields: " + str(output))
 
-
-
     def train_1_input_to_1_output(self, iterations):
         for i in range(iterations):
             for n in range(2):
                 case = 'case' + str(n + 1)
                 self.calculate_error_and_modify_weights_for_not(case)
 
+    def use_perceptron_with_one_input_and_one_output(self):
         for x in [1, 0]:
-            outp_pn = x * self.weights[0] + self.bias * self.weights[2]
-            # Based on the trained weights
-            outp = 1.0 / (1 + numpy.exp(-outp_pn))
-            print(str(x) + " " + self.operation + " yields: " + str(outp))
+            output = af.ActivationFunctions.sigmoid_function_single_input(x, self.bias, self.weights)
+            print(str(x) + " " + self.operation + " yields: " + str(output))
