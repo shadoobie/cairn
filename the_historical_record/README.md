@@ -11,3 +11,4 @@ TODOS:
 * knock out all of the TODOs in the feature code
 * knock out all of the TODOs int he test code
 * add testing
+* get rid of the .idea/ directory from the git repo!
