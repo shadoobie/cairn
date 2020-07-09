@@ -56,6 +56,19 @@ class Flint:
         self.data_header['activation_function'] = "s(x) = 1 / 1 + e^-x = e^x / e^x + 1"
         #TODO finish initializng the data header after clearing out the learning history from the header template
 
+        if self.operation in ['and', 'or']:
+            self.data_header['weight_modification_functions'] = ["w0 = w0 + error * input1 * learning_rate",
+                                                                 "w1 = w1 + error * input2 * learning_rate",
+                                                                 "w2 = w2 + error * bias * learning_rate"]
+            self.data_header['weight_initialization_functions'] = ["random", "random", "random"]
+            self.data_header['starting_weights'] = [self.weights[0], self.weights[1], self.weights[2]]
+        elif self.operation in ['not']:
+            self.data_header['weight_modification_functions'] = ["w0 = w0 + error * input1 * learning_rate",
+                                                                 "w1 = w1 + error * bias * learning_rate"]
+            self.data_header['weight_initialization_functions'] = ["random", "random"]
+            self.data_header['starting_weights'] = [self.weights[0], self.weights[1]]
+        self.data_header['learning_history'] = [] # this might be redundant and or the best way to do this?
+
     def __init_ledger_item__(self):
         a_ledger_item = None
         item_data_structure_location = "..//resources//nn_learning_snapshot.json"
@@ -71,7 +84,7 @@ class Flint:
         learning_history = header["learning_history"]
         # clear out the learning history
         del learning_history[0]
-        return  header
+        return header
 
     def create_a_learning_record(self):
         return self.learning_record_template.copy()
