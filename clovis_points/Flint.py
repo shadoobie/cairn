@@ -5,6 +5,7 @@ import the_historical_record
 from clovis_points import ActivationFunctions as af
 from clovis_points import TruthTables as tt
 from testing.TestUtilities import TestUtilities
+from the_historical_record.Block import Block
 
 
 class Flint:
@@ -96,7 +97,7 @@ class Flint:
                                                                             self.bias,
                                                                             self.weights)
         error = expected_output - actual_output
-        return error
+        return [error, actual_output]
 
     def calculate_error_for_one_input_one_output(self, input1, expected_output):
         sigmoid_output = af.ActivationFunctions.sigmoid_function_single_input(input1,
@@ -111,12 +112,14 @@ class Flint:
         self.weights[2] += error * self.bias * self.learning_rate
 
     def calculate_error_and_modify_weights_for_case(self, case):
-        error = self.calculate_error_for_two_inputs_one_output(self.truth_table[case].get('input1'),
+        error_and_actual = self.calculate_error_for_two_inputs_one_output(self.truth_table[case].get('input1'),
                                                                self.truth_table[case].get('input2'),
                                                                self.truth_table[case].get('expected_output'))
-        self.modify_weights_training(error,
+
+        self.modify_weights_training(error_and_actual[0],
                                      self.truth_table[case].get('input1'),
                                      self.truth_table[case].get('input2'))
+        return error_and_actual
 
     def calculate_error_and_modify_weights_for_not(self, case):
         error = self.calculate_error_for_one_input_one_output(self.truth_table[case].get('input1'),
@@ -128,11 +131,19 @@ class Flint:
         self.weights[0] += error * input1 * self.learning_rate
         self.weights[2] += error * self.bias * self.learning_rate
 
+    #TODO: this whole thing sheesh man aww jeeze wow man i mean this is like a whole nother evening or somethign you know?
+    def determine_if_perceptron_perceives_correctly_enough(self, mastery_criteria, i, iterations):
+        mastered = False
+        if (i > iterations - 3):
+            mastered = True
+
+        return mastered
+
     def train_2_inputs_1_output(self, iterations):
         for i in range(iterations):
             for n in range(4):
                 case = 'case' + str(n + 1)
-                self.calculate_error_and_modify_weights_for_case(case)
+                error_and_actual = self.calculate_error_and_modify_weights_for_case(case)
                 a_learning_record = self.create_a_learning_record()
                 a_learning_record['id'] = case + ':' + self.data_header['id'] + ':' + str(uuid.SafeUUID)
                 a_learning_record['iteration'] = i
@@ -142,6 +153,19 @@ class Flint:
                     a_learning_record['metrics']['inputs'] = [self.truth_table[case].get('input1'), self.truth_table[case].get('input2')]
                 elif self.data_header['operation'] in ['not'] and self.operation in ['not']:
                     a_learning_record['metrics']['inputs'] = [self.truth_table[case].get('input1')]
+                a_learning_record['metrics']['expected_output'] = [self.truth_table[case].get('expected_output')]
+                a_learning_record['metrics']['actual_output'] = [error_and_actual[1]] #TODO: consider making a two attribute class for this with good get names. or something.
+                a_learning_record['metrics']['error'] = [error_and_actual[0]] #TODO: consider making a two attribute class for this with good get names. or something.
+                a_learning_record['metrics']['mastered'] = False
+                a_learning_record['metrics']['mastery_criteria'] = "who cares, for now when the iterations are done."
+                a_learning_record['metrics']['mastered'] = self.determine_if_perceptron_perceives_correctly_enough(a_learning_record['metrics']['mastery_criteria'], i, iterations)
+                self.data_header['learning_history'].append(a_learning_record)
+            self.training_ledger.mine(Block(self.data_header.get('name') + str(self.data_header)))
+        while self.training_ledger.head is not None:
+            print(self.training_ledger.head)
+            self.training_ledger.head = self.training_ledger.head.next
+
+
 
     def use_perceptron_with_two_inputs_and_one_output(self):
         for x, y in [(0, 0), (1, 0), (0, 1), (1, 1)]:
