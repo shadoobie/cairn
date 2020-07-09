@@ -42,14 +42,17 @@ class TestStuff(unittest.TestCase):
         iterations = 200
         or_perceptron = clovis_points.Flint.Flint(learning_rate, bias, operation)
         or_perceptron.train_2_inputs_1_output(iterations)
+        or_perceptron.use_perceptron_with_two_inputs_and_one_output()
 
         print("==========================")
         operation = 'and'
         print(operation)
         print("==========================")
         iterations = 100
-        or_perceptron = clovis_points.Flint.Flint(learning_rate, bias, operation)
-        or_perceptron.train_2_inputs_1_output(iterations)
+        and_perceptron = clovis_points.Flint.Flint(learning_rate, bias, operation)
+        and_perceptron.train_2_inputs_1_output(iterations)
+        and_perceptron.use_perceptron_with_two_inputs_and_one_output()
+
 
         print("==========================")
         operation = 'not'
@@ -63,8 +66,6 @@ class TestStuff(unittest.TestCase):
         print("test_flint_perceptrons passes but needs assertions")
         print("=======================================================================================================")
         pass
-
-
 
     def test_nn_learning_snapshot_valid_against_schema(self):
         # TODO: this test needs a lot of tlc, schema specific validation and object validation to the schema

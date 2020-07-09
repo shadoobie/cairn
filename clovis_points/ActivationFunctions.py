@@ -4,7 +4,7 @@ import numpy
 class ActivationFunctions:
 
     @staticmethod
-    def sigmoid_function(input1, input2, bias, weights):
+    def sigmoid_function_dual_inputs(input1, input2, bias, weights):
         # Sigmoid Function
         outp_pn = input1 * weights[0] + \
                   input2 * weights[1] + \
