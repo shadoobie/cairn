@@ -1,8 +1,10 @@
 import numpy, json
 from numpy import random
 
+import the_historical_record
 from clovis_points import ActivationFunctions as af
 from clovis_points import TruthTables as tt
+from testing.TestUtilities import TestUtilities
 
 
 class Flint:
@@ -11,15 +13,19 @@ class Flint:
     weights = None
     truth_table = None
     operation = None
-    choochoo = None
+    training_ledger = None
+    utils = None
 
     def __init__(self, learning_rate, bias, operation):
+        self.utils = TestUtilities()
+        self.training_ledger = the_historical_record.BlockChain.BlockChain()
         self.learning_rate = learning_rate
         self.bias = bias
         self.truth_table = self.__determine_truth_table__(operation)
         self.weights = list()
         for k in range(3):
             self.weights.append(random.random())  # Assigning random weights
+        self.__init_historical_data__()
 
     def __determine_truth_table__(self, operation):
         if operation in ['and', 'AND', 'And', '&']:
@@ -31,6 +37,20 @@ class Flint:
         elif operation in ['not', 'NOT', 'Not', '-']:
             self.operation = 'NOT'
             return tt.TruthTables.not_truth_table()
+
+    def __init_historical_data__(self):
+        ledger_item = self.create_a_ledger_item()
+
+
+
+    def create_a_ledger_item(self):
+        a_ledger_item = None
+        item_data_structure_location = "..//resources//nn_learning_snapshot.json"
+        with open(item_data_structure_location) as item_data_structure:
+            a_ledger_item = self.utils.load_json_file(item_data_structure)
+            print('successfully loaded: ' + item_data_structure_location)
+
+        return a_ledger_item
 
     def calculate_error(self, input1, input2, expected_output):
         actual_output = af.ActivationFunctions.sigmoid_function_dual_inputs(input1,
