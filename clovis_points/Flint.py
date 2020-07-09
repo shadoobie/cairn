@@ -32,6 +32,7 @@ class Flint:
         self.__init_historical_data__()
 
     def __determine_truth_table__(self, operation):
+        #TODO: should probably put the truth table that this determines into the data header
         if operation in ['and', 'AND', 'And', '&']:
             self.operation = 'AND'
             return tt.TruthTables.and_truth_table()
@@ -89,7 +90,7 @@ class Flint:
     def create_a_learning_record(self):
         return self.learning_record_template.copy()
 
-    def calculate_error(self, input1, input2, expected_output):
+    def calculate_error_for_two_inputs_one_output(self, input1, input2, expected_output):
         actual_output = af.ActivationFunctions.sigmoid_function_dual_inputs(input1,
                                                                             input2,
                                                                             self.bias,
@@ -97,7 +98,7 @@ class Flint:
         error = expected_output - actual_output
         return error
 
-    def calculate_error_for_not(self, input1, expected_output):
+    def calculate_error_for_one_input_one_output(self, input1, expected_output):
         sigmoid_output = af.ActivationFunctions.sigmoid_function_single_input(input1,
                                                                               self.bias,
                                                                               self.weights)
@@ -110,16 +111,16 @@ class Flint:
         self.weights[2] += error * self.bias * self.learning_rate
 
     def calculate_error_and_modify_weights_for_case(self, case):
-        error = self.calculate_error(self.truth_table[case].get('input1'),
-                                     self.truth_table[case].get('input2'),
-                                     self.truth_table[case].get('expected_output'))
+        error = self.calculate_error_for_two_inputs_one_output(self.truth_table[case].get('input1'),
+                                                               self.truth_table[case].get('input2'),
+                                                               self.truth_table[case].get('expected_output'))
         self.modify_weights_training(error,
                                      self.truth_table[case].get('input1'),
                                      self.truth_table[case].get('input2'))
 
     def calculate_error_and_modify_weights_for_not(self, case):
-        error = self.calculate_error_for_not(self.truth_table[case].get('input1'),
-                                             self.truth_table[case].get('expected_output'))
+        error = self.calculate_error_for_one_input_one_output(self.truth_table[case].get('input1'),
+                                                              self.truth_table[case].get('expected_output'))
         self.modify_weights_training_for_not(error,
                                              self.truth_table[case].get('input1'))
 
@@ -132,6 +133,15 @@ class Flint:
             for n in range(4):
                 case = 'case' + str(n + 1)
                 self.calculate_error_and_modify_weights_for_case(case)
+                a_learning_record = self.create_a_learning_record()
+                a_learning_record['id'] = case + ':' + self.data_header['id'] + ':' + str(uuid.SafeUUID)
+                a_learning_record['iteration'] = i
+                a_learning_record['metrics']['id'] = a_learning_record['id'] + ':' + str(uuid.SafeUUID)
+                a_learning_record['metrics']['weights'] = self.weights
+                if self.data_header['operation'] in ['and', 'or'] and self.operation in ['and', 'or']:
+                    a_learning_record['metrics']['inputs'] = [self.truth_table[case].get('input1'), self.truth_table[case].get('input2')]
+                elif self.data_header['operation'] in ['not'] and self.operation in ['not']:
+                    a_learning_record['metrics']['inputs'] = [self.truth_table[case].get('input1')]
 
     def use_perceptron_with_two_inputs_and_one_output(self):
         for x, y in [(0, 0), (1, 0), (0, 1), (1, 1)]:
