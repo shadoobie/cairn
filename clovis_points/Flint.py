@@ -117,11 +117,6 @@ class Flint:
         error = expected_output - sigmoid_output
         return error
 
-    def modify_weights_training(self, error, input1, input2):
-        self.weights[0] += error * input1 * self.learning_rate
-        self.weights[1] += error * input2 * self.learning_rate
-        self.weights[2] += error * self.bias * self.learning_rate
-
     def calculate_error_and_modify_weights_for_case(self, case):
         error_and_actual = self.calculate_error_for_two_inputs_one_output(self.truth_table[case].get('input1'),
                                                                           self.truth_table[case].get('input2'),
@@ -138,15 +133,20 @@ class Flint:
         self.modify_weights_training_for_not(error,
                                              self.truth_table[case].get('input1'))
 
+    def modify_weights_training(self, error, input1, input2):
+        self.weights[0] += error * input1 * self.learning_rate
+        self.weights[1] += error * input2 * self.learning_rate
+        self.weights[2] += error * self.bias * self.learning_rate
+
     def modify_weights_training_for_not(self, error, input1):
         self.weights[0] += error * input1 * self.learning_rate
         self.weights[2] += error * self.bias * self.learning_rate
 
     #TODO: this whole thing sheesh man aww jeeze wow man i mean this is like a whole nother evening or somethign you know?
     def determine_if_perceptron_perceives_correctly_enough(self, mastery_criteria, i, iterations):
-        mastered = False
+        mastered = "false"
         if (i > iterations - 3):
-            mastered = True
+            mastered = "true"
 
         return mastered
 
@@ -172,6 +172,12 @@ class Flint:
         while self.training_ledger.head is not None:
             self.log.info(self.training_ledger.head)
             self.training_ledger.head = self.training_ledger.head.next
+
+    def train_1_input_to_1_output(self, iterations):
+        for i in range(iterations):
+            for n in range(2):
+                case = 'case' + str(n + 1)
+                self.calculate_error_and_modify_weights_for_not(case)
 
     def populate_a_learning_record(self, a_learning_record, error_and_actual, case, i, iterations):
         a_learning_record['id'] = case + ':' + self.data_header['id'] + ':' + str(uuid.uuid4())
@@ -200,12 +206,6 @@ class Flint:
             output = af.ActivationFunctions.sigmoid_function_dual_inputs(x, y, self.bias, self.weights)
             self.log.info(str(x) + " " + self.operation + " " + str(y) + " yields: " + str(output))
             print(str(x) + " " + self.operation + " " + str(y) + " yields: " + str(output))
-
-    def train_1_input_to_1_output(self, iterations):
-        for i in range(iterations):
-            for n in range(2):
-                case = 'case' + str(n + 1)
-                self.calculate_error_and_modify_weights_for_not(case)
 
     def use_perceptron_with_one_input_and_one_output(self):
         for x in [1, 0]:
