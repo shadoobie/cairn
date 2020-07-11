@@ -6,6 +6,7 @@ import hashlib
 
 
 class Block:
+    head = None
     blockNo = 0
     data = None
     next = None
