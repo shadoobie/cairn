@@ -91,11 +91,20 @@ class TestStuff(unittest.TestCase):
                 self.log.info('successfully loaded: ' + nn_learning_snapshot_object_to_validate_against_schema_location)
                 validate(nn_snapshot_object, nn_snapshot_schema)
                 self.log.info("validating " + nn_learning_snapshot_object_to_validate_against_schema_location +
-                      " against the schema file " +
-                      nn_learning_snapshot_schema_location +
-                      " and since you're seeing this, i think it's considered valid.")
-                self.log.info("test_nn_learning_snapshot_valid_against_schema done.")
+                              " against the schema file " +
+                              nn_learning_snapshot_schema_location +
+                              " and since you're seeing this, i think it's considered valid.")
 
+            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//generated_learning_snapshot_example.json"
+            with open(nn_learning_snapshot_example_location) as example_file:
+                nn_sh_example = self.utils.load_json_file(example_file)
+                validate(nn_sh_example, nn_snapshot_schema)
+                self.log.info("validating the generated learning snapshot example "  + nn_learning_snapshot_example_location +
+                              " against the schema file " +
+                              nn_learning_snapshot_schema_location +
+                              " and since you're seeing this, i think it's considered valid.")
+
+        self.log.info("test_nn_learning_snapshot_valid_against_schema done.")
         self.log.info("=======================================================================================================")
         pass
 
