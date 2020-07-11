@@ -1,14 +1,12 @@
-import numpy, json
-from numpy import random
 import uuid
-import logging
-import the_historical_record
+
+from numpy import random
+
 from clovis_points import ActivationFunctions as af
 from clovis_points import TruthTables as tt
 from testing.TestUtilities import TestUtilities
 from the_historical_record.Block import Block
 from the_historical_record.BlockChain import BlockChain
-from utializers import ToiletChairLogFactory as logger
 
 
 class Flint:
@@ -28,7 +26,7 @@ class Flint:
         self.utils = TestUtilities()
         self.learning_rate = learning_rate
         self.bias = bias
-        self.truth_table = self.__determine_truth_table__(operation)
+        self.truth_table = self.__init_truth_table__(operation)
         self.__init_log(log)
         self.weights = list()
         for k in range(3):
@@ -38,12 +36,12 @@ class Flint:
 
     def __init_log(self, log):
         '''this needs to be called after __determine_truth_table__ (so not functional, ik, ik)'''
-        component = "Flint_perceptron_learning_logical_" + self.operation + "_operation.log"
+        component = "Flint_perceptron_learning_logical_" + self.operation + "_operation"
         self.log = log
         print("Flint is appending to the log file with component: " + component +
               " but i don't think it means anything yet.")
 
-    def __determine_truth_table__(self, operation):
+    def __init_truth_table__(self, operation):
         #TODO: should probably put the truth table that this determines into the data header
         if operation in ['and', 'AND', 'And', '&']:
             self.operation = 'AND'
