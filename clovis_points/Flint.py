@@ -182,7 +182,7 @@ class Flint:
                 a_learning_record = self.populate_a_learning_record(self.create_a_learning_record(),
                                                                     results,
                                                                     case,
-                                                                    i,
+                                                                    i, #TODO: figure out what's go'n on with iterations
                                                                     iterations)
                 self.data_header['learning_history'].append(a_learning_record)
             a_ledger_item_or_block = Block(self.data_header.get('name') + str(self.data_header))

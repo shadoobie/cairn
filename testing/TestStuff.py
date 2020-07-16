@@ -104,21 +104,30 @@ class TestStuff(unittest.TestCase):
                               nn_learning_snapshot_schema_location +
                               " and since you're seeing this, i think it's considered valid.")
 
-            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//three_random_nn_snapshot_samples_generated_in_the_log.json"
-            with open(nn_learning_snapshot_example_location) as example_file:
-                nn_sh_example = self.utils.load_json_file(example_file)
-                validate(nn_sh_example, nn_snapshot_schema)
-                self.log.info(
-                    "validating the generated learning snapshot example " + nn_learning_snapshot_example_location +
-                    " against the schema file " +
-                    nn_learning_snapshot_schema_location +
-                    " and since you're seeing this, i think it's considered valid.")
+            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//random_or_nn_snapshot_sample_generated_in_the_log_in_test.json"
+            self.run_schema_validation_for(nn_learning_snapshot_example_location, nn_snapshot_schema, nn_learning_snapshot_schema_location)
+
+            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//random_and_nn_snapshot_sample_generated_in_the_log_in_test.json"
+            self.run_schema_validation_for(nn_learning_snapshot_example_location, nn_snapshot_schema, nn_learning_snapshot_schema_location)
+
+            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//random_not_nn_snapshot_sample_generated_in_the_log_in_test.json"
+            self.run_schema_validation_for(nn_learning_snapshot_example_location, nn_snapshot_schema, nn_learning_snapshot_schema_location)
 
         self.log.info("test_nn_learning_snapshot_valid_against_schema done.")
         self.log.info(
             "=======================================================================================================")
         pass
 
+    def run_schema_validation_for(self, nn_learning_snapshot_example_location, nn_snapshot_schema, nn_learning_snapshot_schema_location):
+
+        with open(nn_learning_snapshot_example_location) as example_file:
+            nn_sh_example = self.utils.load_json_file(example_file)
+            validate(nn_sh_example, nn_snapshot_schema)
+            self.log.info(
+                "validating the generated learning snapshot example " + nn_learning_snapshot_example_location +
+                " against the schema file " +
+                nn_learning_snapshot_schema_location +
+                " and since you're seeing this, i think it's considered valid.")
 
 if __name__ == '__main__':
     unittest.main()
