@@ -4,6 +4,7 @@ from numpy import random
 
 from clovis_points import ActivationFunctions as af
 from clovis_points import TruthTables as tt
+from clovis_points.Flutes import Flutes
 from testing.TestUtilities import TestUtilities
 from the_historical_record.Block import Block
 from the_historical_record.BlockChain import BlockChain
@@ -100,35 +101,37 @@ class Flint:
     def create_a_learning_record(self):
         return self.learning_record_template.copy()
 
-    def calculate_error_for_two_inputs_one_output(self, input1, input2, expected_output):
+    def calculate_error_for_two_inputs_one_output_nn(self, input1, input2, expected_output):
         actual_output = af.ActivationFunctions.sigmoid_function_dual_inputs(input1,
                                                                             input2,
                                                                             self.bias,
                                                                             self.weights)
         error = expected_output - actual_output
-        return [error, actual_output]
+        flute = Flutes(error, actual_output)
+        return flute
 
-    def calculate_error_for_one_input_one_output(self, input1, expected_output):
-        sigmoid_output = af.ActivationFunctions.sigmoid_function_single_input(input1,
+    def calculate_error_for_one_input_one_output_nn(self, input1, expected_output):
+        actual_output = af.ActivationFunctions.sigmoid_function_single_input(input1,
                                                                               self.bias,
                                                                               self.weights)
-        error = expected_output - sigmoid_output
-        return error
+        error = expected_output - actual_output
+        flute = Flutes(error, actual_output)
+        return flute
 
     def calculate_error_and_modify_weights_for_case(self, case):
-        error_and_actual = self.calculate_error_for_two_inputs_one_output(self.truth_table[case].get('input1'),
-                                                                          self.truth_table[case].get('input2'),
-                                                                          self.truth_table[case].get('expected_output'))
+        results = self.calculate_error_for_two_inputs_one_output_nn(self.truth_table[case].get('input1'),
+                                                                    self.truth_table[case].get('input2'),
+                                                                    self.truth_table[case].get('expected_output'))
 
-        self.modify_weights_training(error_and_actual[0],
+        self.modify_weights_training(results.get_error(),
                                      self.truth_table[case].get('input1'),
                                      self.truth_table[case].get('input2'))
-        return error_and_actual
+        return results
 
     def calculate_error_and_modify_weights_for_not(self, case):
-        error = self.calculate_error_for_one_input_one_output(self.truth_table[case].get('input1'),
-                                                              self.truth_table[case].get('expected_output'))
-        self.modify_weights_training_for_not(error,
+        results = self.calculate_error_for_one_input_one_output_nn(self.truth_table[case].get('input1'),
+                                                                 self.truth_table[case].get('expected_output'))
+        self.modify_weights_training_for_not(results.get_error(),
                                              self.truth_table[case].get('input1'))
 
     def modify_weights_training(self, error, input1, input2):
@@ -152,9 +155,9 @@ class Flint:
         for i in range(iterations):
             for n in range(4):
                 case = 'case' + str(n + 1)
-                error_and_actual = self.calculate_error_and_modify_weights_for_case(case)
+                results = self.calculate_error_and_modify_weights_for_case(case)
                 a_learning_record = self.populate_a_learning_record(self.create_a_learning_record(),
-                                                                    error_and_actual,
+                                                                    results,
                                                                     case,
                                                                     i,
                                                                     iterations)
@@ -175,9 +178,22 @@ class Flint:
         for i in range(iterations):
             for n in range(2):
                 case = 'case' + str(n + 1)
-                self.calculate_error_and_modify_weights_for_not(case)
+                results = self.calculate_error_and_modify_weights_for_not(case)
+                a_learning_record = self.populate_a_learning_record(self.create_a_learning_record(),
+                                                                    results,
+                                                                    case,
+                                                                    i,
+                                                                    iterations)
+                self.data_header['learning_history'].append(a_learning_record)
+            a_ledger_item_or_block = Block(self.data_header.get('name') + str(self.data_header))
+            self.training_ledger.mine(a_ledger_item_or_block)
+            self.log.info("Block created for iteration: "  + str(i) + " the block's hash: " + a_ledger_item_or_block.data )
+            self.log.info("the block's number: " + str(a_ledger_item_or_block.blockNo))
+            self.log.info("the block's head: " + str(a_ledger_item_or_block.head))
+            self.log.info("the block's next: " + str(a_ledger_item_or_block.next))
+            self.log.info("the block's data: " + str(a_ledger_item_or_block.data))
 
-    def populate_a_learning_record(self, a_learning_record, error_and_actual, case, i, iterations):
+    def populate_a_learning_record(self, a_learning_record, training_results, case, i, iterations):
         self.log.info('about to populate a learning record with case:' + case)
         a_learning_record['id'] = case + ':' + self.data_header['id'] + ':' + str(uuid.uuid4())
         a_learning_record['iteration'] = i
@@ -194,10 +210,8 @@ class Flint:
             inputs = [self.truth_table[case].get('input1')]
             a_learning_record['metrics']['inputs'] = inputs
         a_learning_record['metrics']['expected_output'] = [self.truth_table[case].get('expected_output')]
-        a_learning_record['metrics']['actual_output'] = [error_and_actual[
-                                                             1]]  # TODO: consider making a two attribute class for this with good get names. or something.
-        a_learning_record['metrics']['error'] = [error_and_actual[
-                                                     0]]  # TODO: consider making a two attribute class for this with good get names. or something.
+        a_learning_record['metrics']['actual_output'] = [training_results.get_actual()]
+        a_learning_record['metrics']['error'] = [training_results.get_error()]
         a_learning_record['metrics']['mastered'] = False
         a_learning_record['metrics']['mastery_criteria'] = "who cares, for now when the iterations are done."
         a_learning_record['metrics']['mastered'] = self.determine_if_perceptron_perceives_correctly_enough(

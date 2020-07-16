@@ -17,10 +17,10 @@ class TestStuff(unittest.TestCase):
     utils = TestUtilities()
     log = ToiletChairLogFactory().get_logger("TestStuff", "_testing_stuff.log")
 
-    def test_generator_functions(self):
-        print("about to run my_gen()")
-        my_gen()
-        print("okay ran my_gen() what gives?")
+    # def test_generator_functions(self):
+    #     print("about to run my_gen()")
+    #     my_gen()
+    #     print("okay ran my_gen() what gives?")
 
     def test_the_historical_record(self):
         self.log.info(
