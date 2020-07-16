@@ -9,6 +9,7 @@ from clovis_points.Flint import Flint
 from the_historical_record.Block import Block
 from the_historical_record import BlockChain
 from utializers.ToiletChairLogFactory import ToiletChairLogFactory
+from utializers.generatorfunctions import my_gen
 from jsonschema import validate
 
 
@@ -16,8 +17,14 @@ class TestStuff(unittest.TestCase):
     utils = TestUtilities()
     log = ToiletChairLogFactory().get_logger("TestStuff", "_testing_stuff.log")
 
+    def test_generator_functions(self):
+        print("about to run my_gen()")
+        my_gen()
+        print("okay ran my_gen() what gives?")
+
     def test_the_historical_record(self):
-        self.log.info("=======================================================================================================")
+        self.log.info(
+            "=======================================================================================================")
         self.log.info(" test_the_historical_record ")
         my_block_chain = the_historical_record.BlockChain.BlockChain()
         for n in range(10):
@@ -27,12 +34,14 @@ class TestStuff(unittest.TestCase):
             my_block_chain.head = my_block_chain.head.next
 
         self.log.info("test_the_historical_record mined a hash,test passes, but needs assertions.")
-        self.log.info("=======================================================================================================")
+        self.log.info(
+            "=======================================================================================================")
         pass
 
     def test_flint_perceptrons(self):
 
-        self.log.info("=======================================================================================================")
+        self.log.info(
+            "=======================================================================================================")
         self.log.info(" test_flint_perceptrons ")
 
         learning_rate = 1
@@ -45,7 +54,6 @@ class TestStuff(unittest.TestCase):
         or_perceptron = Flint(learning_rate, bias, operation, self.log)
         or_perceptron.train_2_inputs_1_output(iterations)
         or_perceptron.use_perceptron_with_two_inputs_and_one_output()
-        or_perceptron = None
 
         self.log.info("==========================")
         operation = 'and'
@@ -55,8 +63,6 @@ class TestStuff(unittest.TestCase):
         and_perceptron = Flint(learning_rate, bias, operation, self.log)
         and_perceptron.train_2_inputs_1_output(iterations)
         and_perceptron.use_perceptron_with_two_inputs_and_one_output()
-        and_perceptron = None
-
 
         self.log.info("==========================")
         operation = 'not'
@@ -66,16 +72,17 @@ class TestStuff(unittest.TestCase):
         not_perceptron = Flint(learning_rate, bias, operation, self.log)
         not_perceptron.train_1_input_to_1_output(iterations)
         not_perceptron.use_perceptron_with_one_input_and_one_output()
-        not_perceptron = None
 
         # TODO need assertions and rounding to verify the NNs approached either 0 or 1 correctly.
         self.log.info("test_flint_perceptrons passes but needs assertions")
-        self.log.info("=======================================================================================================")
+        self.log.info(
+            "=======================================================================================================")
         pass
 
     def test_nn_learning_snapshot_valid_against_schema(self):
         # TODO: this test needs a lot of tlc, schema specific validation and object validation to the schema
-        self.log.info("=======================================================================================================")
+        self.log.info(
+            "=======================================================================================================")
         self.log.info(" test_nn_learning_snapshot_valid_against_schema ")
 
         # first open the schema file into a data string object and
@@ -99,13 +106,15 @@ class TestStuff(unittest.TestCase):
             with open(nn_learning_snapshot_example_location) as example_file:
                 nn_sh_example = self.utils.load_json_file(example_file)
                 validate(nn_sh_example, nn_snapshot_schema)
-                self.log.info("validating the generated learning snapshot example "  + nn_learning_snapshot_example_location +
-                              " against the schema file " +
-                              nn_learning_snapshot_schema_location +
-                              " and since you're seeing this, i think it's considered valid.")
+                self.log.info(
+                    "validating the generated learning snapshot example " + nn_learning_snapshot_example_location +
+                    " against the schema file " +
+                    nn_learning_snapshot_schema_location +
+                    " and since you're seeing this, i think it's considered valid.")
 
         self.log.info("test_nn_learning_snapshot_valid_against_schema done.")
-        self.log.info("=======================================================================================================")
+        self.log.info(
+            "=======================================================================================================")
         pass
 
 

@@ -43,14 +43,14 @@ class Flint:
 
     def __init_truth_table__(self, operation):
         #TODO: should probably put the truth table that this determines into the data header
-        if operation in ['and', 'AND', 'And', '&']:
-            self.operation = 'AND'
+        if operation.lower() in ['and', '&']:
+            self.operation = 'and'
             return tt.TruthTables.and_truth_table()
-        elif operation in ['or', 'OR', 'Or', '|']:
-            self.operation = 'OR'
+        elif operation.lower() in ['or', '|']:
+            self.operation = 'or'
             return tt.TruthTables.or_truth_table()
-        elif operation in ['not', 'NOT', 'Not', '-']:
-            self.operation = 'NOT'
+        elif operation.lower in ['not', '-']:
+            self.operation = 'not'
             return tt.TruthTables.not_truth_table()
 
     def __init_historical_data__(self):
@@ -178,15 +178,21 @@ class Flint:
                 self.calculate_error_and_modify_weights_for_not(case)
 
     def populate_a_learning_record(self, a_learning_record, error_and_actual, case, i, iterations):
+        self.log.info('about to populate a learning record with case:' + case)
         a_learning_record['id'] = case + ':' + self.data_header['id'] + ':' + str(uuid.uuid4())
         a_learning_record['iteration'] = i
         a_learning_record['metrics']['id'] = a_learning_record['id'] + ':' + str(uuid.uuid4())
         a_learning_record['metrics']['weights'] = self.weights
-        if self.data_header['operation'] in ['and', 'or'] and self.operation in ['and', 'or']:
-            a_learning_record['metrics']['inputs'] = [self.truth_table[case]['input1'],
-                                                      self.truth_table[case]['input2']]
-        elif self.data_header['operation'] in ['not'] and self.operation in ['not']:
-            a_learning_record['metrics']['inputs'] = [self.truth_table[case]['input1']]
+        if self.data_header['operation'] in ['and', 'or'] and \
+                self.operation in ['and', 'or'] and \
+                self.truth_table['operation'] in ['and', 'or']:
+            inputs = [self.truth_table[case].get('input1'), self.truth_table[case].get('input2')]
+            a_learning_record['metrics']['inputs'] = inputs
+        elif self.data_header['operation'] in ['not'] and \
+                self.operation in ['not'] and \
+                self.truth_table['operation'] in ['not']:
+            inputs = [self.truth_table[case].get('input1')]
+            a_learning_record['metrics']['inputs'] = inputs
         a_learning_record['metrics']['expected_output'] = [self.truth_table[case].get('expected_output')]
         a_learning_record['metrics']['actual_output'] = [error_and_actual[
                                                              1]]  # TODO: consider making a two attribute class for this with good get names. or something.
