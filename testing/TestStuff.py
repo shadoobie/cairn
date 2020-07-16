@@ -46,23 +46,25 @@ class TestStuff(unittest.TestCase):
 
         learning_rate = 1
         bias = 1
-        operation = 'or'
-        self.log.info("==========================")
-        self.log.info(operation)
-        self.log.info("==========================")
-        iterations = 200
-        or_perceptron = Flint(learning_rate, bias, operation, self.log)
-        or_perceptron.train_2_inputs_1_output(iterations)
-        or_perceptron.use_perceptron_with_two_inputs_and_one_output()
 
-        self.log.info("==========================")
-        operation = 'and'
-        self.log.info(operation)
-        self.log.info("==========================")
-        iterations = 100
-        and_perceptron = Flint(learning_rate, bias, operation, self.log)
-        and_perceptron.train_2_inputs_1_output(iterations)
-        and_perceptron.use_perceptron_with_two_inputs_and_one_output()
+
+        # operation = 'or'
+        # self.log.info("==========================")
+        # self.log.info(operation)
+        # self.log.info("==========================")
+        # iterations = 200
+        # or_perceptron = Flint(learning_rate, bias, operation, self.log)
+        # or_perceptron.train_2_inputs_1_output(iterations)
+        # or_perceptron.use_perceptron_with_two_inputs_and_one_output()
+        #
+        # self.log.info("==========================")
+        # operation = 'and'
+        # self.log.info(operation)
+        # self.log.info("==========================")
+        # iterations = 100
+        # and_perceptron = Flint(learning_rate, bias, operation, self.log)
+        # and_perceptron.train_2_inputs_1_output(iterations)
+        # and_perceptron.use_perceptron_with_two_inputs_and_one_output()
 
         self.log.info("==========================")
         operation = 'not'

@@ -50,7 +50,7 @@ class Flint:
         elif operation.lower() in ['or', '|']:
             self.operation = 'or'
             return tt.TruthTables.or_truth_table()
-        elif operation.lower in ['not', '-']:
+        elif operation.lower() in ['not', '-']:
             self.operation = 'not'
             return tt.TruthTables.not_truth_table()
 
@@ -133,6 +133,8 @@ class Flint:
                                                                  self.truth_table[case].get('expected_output'))
         self.modify_weights_training_for_not(results.get_error(),
                                              self.truth_table[case].get('input1'))
+
+        return results
 
     def modify_weights_training(self, error, input1, input2):
         self.weights[0] += error * input1 * self.learning_rate
