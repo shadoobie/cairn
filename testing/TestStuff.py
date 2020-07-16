@@ -17,10 +17,10 @@ class TestStuff(unittest.TestCase):
     utils = TestUtilities()
     log = ToiletChairLogFactory().get_logger("TestStuff", "_testing_stuff.log")
 
-    # def test_generator_functions(self):
-    #     print("about to run my_gen()")
-    #     my_gen()
-    #     print("okay ran my_gen() what gives?")
+    def test_generator_functions(self):
+        print("about to run my_gen()")
+        my_gen()
+        print("okay ran my_gen() what gives?")
 
     def test_the_historical_record(self):
         self.log.info(
@@ -48,23 +48,23 @@ class TestStuff(unittest.TestCase):
         bias = 1
 
 
-        # operation = 'or'
-        # self.log.info("==========================")
-        # self.log.info(operation)
-        # self.log.info("==========================")
-        # iterations = 200
-        # or_perceptron = Flint(learning_rate, bias, operation, self.log)
-        # or_perceptron.train_2_inputs_1_output(iterations)
-        # or_perceptron.use_perceptron_with_two_inputs_and_one_output()
-        #
-        # self.log.info("==========================")
-        # operation = 'and'
-        # self.log.info(operation)
-        # self.log.info("==========================")
-        # iterations = 100
-        # and_perceptron = Flint(learning_rate, bias, operation, self.log)
-        # and_perceptron.train_2_inputs_1_output(iterations)
-        # and_perceptron.use_perceptron_with_two_inputs_and_one_output()
+        operation = 'or'
+        self.log.info("==========================")
+        self.log.info(operation)
+        self.log.info("==========================")
+        iterations = 200
+        or_perceptron = Flint(learning_rate, bias, operation, self.log)
+        or_perceptron.train_2_inputs_1_output(iterations)
+        or_perceptron.use_perceptron_with_two_inputs_and_one_output()
+
+        self.log.info("==========================")
+        operation = 'and'
+        self.log.info(operation)
+        self.log.info("==========================")
+        iterations = 100
+        and_perceptron = Flint(learning_rate, bias, operation, self.log)
+        and_perceptron.train_2_inputs_1_output(iterations)
+        and_perceptron.use_perceptron_with_two_inputs_and_one_output()
 
         self.log.info("==========================")
         operation = 'not'
@@ -104,7 +104,7 @@ class TestStuff(unittest.TestCase):
                               nn_learning_snapshot_schema_location +
                               " and since you're seeing this, i think it's considered valid.")
 
-            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//generated_learning_snapshot_example.json"
+            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//three_random_nn_snapshot_samples_generated_in_the_log.json"
             with open(nn_learning_snapshot_example_location) as example_file:
                 nn_sh_example = self.utils.load_json_file(example_file)
                 validate(nn_sh_example, nn_snapshot_schema)

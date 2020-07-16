@@ -39,8 +39,7 @@ class Flint:
         '''this needs to be called after __determine_truth_table__ (so not functional, ik, ik)'''
         component = "Flint_perceptron_learning_logical_" + self.operation + "_operation"
         self.log = log
-        print("Flint is appending to the log file with component: " + component +
-              " but i don't think it means anything yet.")
+        print("Flint is appending to the log file with component: " + component)
 
     def __init_truth_table__(self, operation):
         #TODO: should probably put the truth table that this determines into the data header
@@ -66,15 +65,14 @@ class Flint:
         self.data_header['bias'] = self.bias
         self.data_header['activation_function_name'] = "Sigmoid function"
         self.data_header['activation_function'] = "s(x) = 1 / 1 + e^-x = e^x / e^x + 1"
-        #TODO finish initializng the data header after clearing out the learning history from the header template
 
-        if self.operation in ['AND', 'OR']:
+        if self.operation in ['and', 'or']:
             self.data_header['weight_modification_functions'] = ["w0 = w0 + error * input1 * learning_rate",
                                                                  "w1 = w1 + error * input2 * learning_rate",
                                                                  "w2 = w2 + error * bias * learning_rate"]
             self.data_header['weight_initialization_functions'] = ["random", "random", "random"]
             self.data_header['starting_weights'] = [self.weights[0], self.weights[1], self.weights[2]]
-        elif self.operation in ['NOT']:
+        elif self.operation in ['not']:
             self.data_header['weight_modification_functions'] = ["w0 = w0 + error * input1 * learning_rate",
                                                                  "w1 = w1 + error * bias * learning_rate"]
             self.data_header['weight_initialization_functions'] = ["random", "random"]
