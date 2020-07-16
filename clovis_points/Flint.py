@@ -150,7 +150,7 @@ class Flint:
             mastered = "true"
 
         return mastered
-
+    #TODO: validate json before commiting it to a block and adding the block to the blockchain
     def train_2_inputs_1_output(self, iterations):
         for i in range(iterations):
             for n in range(4):
@@ -174,6 +174,7 @@ class Flint:
             self.log.info(self.training_ledger.head)
             self.training_ledger.head = self.training_ledger.head.next
 
+    #TODO: validate json before commiting it to a block and adding the block to the blockchain
     def train_1_input_to_1_output(self, iterations):
         for i in range(iterations):
             for n in range(2):
