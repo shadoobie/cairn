@@ -88,13 +88,13 @@ class TestStuff(unittest.TestCase):
         self.log.info(" test_nn_learning_snapshot_valid_against_schema ")
 
         # first open the schema file into a data string object and
-        nn_learning_snapshot_schema_location = "C://Users//Owner//workspaces//cairn//resources//nn_learning_snapshot.schema.json"
+        nn_learning_snapshot_schema_location = "../resources/nn_learning_snapshot.schema.json"
         schema_data = ""
         with open(nn_learning_snapshot_schema_location) as schema_file:
             nn_snapshot_schema = self.utils.load_json_file(schema_file)
             self.log.info('successfully loaded: ' + nn_learning_snapshot_schema_location)
 
-            nn_learning_snapshot_object_to_validate_against_schema_location = "C://Users//Owner//workspaces//cairn//resources//nn_learning_snapshot.json"
+            nn_learning_snapshot_object_to_validate_against_schema_location = "../resources/nn_learning_snapshot.json"
             with open(nn_learning_snapshot_object_to_validate_against_schema_location) as object_file:
                 nn_snapshot_object = self.utils.load_json_file(object_file)
                 self.log.info('successfully loaded: ' + nn_learning_snapshot_object_to_validate_against_schema_location)
@@ -104,13 +104,13 @@ class TestStuff(unittest.TestCase):
                               nn_learning_snapshot_schema_location +
                               " and since you're seeing this, i think it's considered valid.")
 
-            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//random_or_nn_snapshot_sample_generated_in_the_log_in_test.json"
+            nn_learning_snapshot_example_location = "../resources/random_or_nn_snapshot_sample_generated_in_the_log_in_test.json"
             self.run_schema_validation_for(nn_learning_snapshot_example_location, nn_snapshot_schema, nn_learning_snapshot_schema_location)
 
-            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//random_and_nn_snapshot_sample_generated_in_the_log_in_test.json"
+            nn_learning_snapshot_example_location = "../resources/random_and_nn_snapshot_sample_generated_in_the_log_in_test.json"
             self.run_schema_validation_for(nn_learning_snapshot_example_location, nn_snapshot_schema, nn_learning_snapshot_schema_location)
 
-            nn_learning_snapshot_example_location = "C://Users//Owner//workspaces//cairn//resources//random_not_nn_snapshot_sample_generated_in_the_log_in_test.json"
+            nn_learning_snapshot_example_location = "../resources/random_not_nn_snapshot_sample_generated_in_the_log_in_test.json"
             self.run_schema_validation_for(nn_learning_snapshot_example_location, nn_snapshot_schema, nn_learning_snapshot_schema_location)
 
         self.log.info("test_nn_learning_snapshot_valid_against_schema done.")
