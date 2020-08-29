@@ -2,7 +2,13 @@ import unittest
 import json
 from web3 import Web3
 
+from infur.InfurUtils import InfurUtils
+
+
 class TestInfer(unittest.TestCase):
+
+    util = InfurUtils()
+
     def test_what_are_you_infuraing(self):
         infur_url = "https://mainnet.infura.io/v3/302093503f54409ab515af1c1b775a6c"
         web3 = Web3(Web3.HTTPProvider(infur_url))
@@ -31,11 +37,17 @@ class TestInfer(unittest.TestCase):
         # total_supply_to18d = web3.fromWei(total_supply_inwie, 'ether / using 18 decimals.')
         # print("the total supply " + str(total_supply_to18d))
 
+        print("Smart contract name:")
         print(smart_contract.functions.name().call())
+        print("Smart contract token's ticker symbol:")
         print(smart_contract.functions.symbol().call())
         account_holder_address = web3.toChecksumAddress("0x7a62a7dcf64e1eb94e374ec187ad14ba6e595062")
         balance = smart_contract.functions.balanceOf(account_holder_address).call()
+        print("balance of the largest account holder:")
         print(balance)
+
+        adjusted_balance = self.util.from_wei(balance)
+        print(adjusted_balance)
 
 
 
