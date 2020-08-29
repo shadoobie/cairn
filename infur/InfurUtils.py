@@ -1,7 +1,7 @@
 class InfurUtils:
 
     def from_wei(self, wei_number):
-        return self.moveDecimalPoint(wei_number, 18)
+        return self.move_decimal_point(wei_number, 18)
 
     '''
         credit: m3trik on https://stackoverflow.com/questions/8362792/how-do-i-shift-the-decimal-place-in-python/8362821
@@ -16,7 +16,7 @@ class InfurUtils:
 
         ex. moveDecimalPoint(11.05, -2) returns: 0.1105
         '''
-    def move_decimal_point(num, decimal_places):
+    def move_decimal_point(self, num, decimal_places):
         for _ in range(abs(decimal_places)):
 
             if decimal_places > 0:
