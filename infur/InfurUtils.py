@@ -1,7 +1,8 @@
 class InfurUtils:
 
     def from_wei(self, wei_number):
-        return self.move_decimal_point(wei_number, 18)
+        dot_zero_wei = float(wei_number)
+        return self.move_decimal_point(dot_zero_wei, -18)
 
     '''
         credit: m3trik on https://stackoverflow.com/questions/8362792/how-do-i-shift-the-decimal-place-in-python/8362821
